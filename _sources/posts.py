@@ -92,9 +92,11 @@ BLOG = [
 </ul>
 <p>Des règles simples, rappelées à chaque compte rendu, qui structurent un chantier de près de deux ans.</p>"""),
  dict(slug="horizon-belledonne-la-terrasse", date="2026-11-08", ref="horizon-belledonne", cat="Horizon Belledonne",
-  title="Horizon Belledonne : piloter un chantier mixte collectif et maisons",
-  desc="À La Terrasse, le chantier Horizon Belledonne démarre le 4 janvier 2027 : 25 appartements et 10 maisons, dont 30 logements en PSLA avec SOLIHA.",
-  body="""<p>Dans le Grésivaudan, l'opération <strong>Horizon Belledonne</strong> réunit sur un même site un immeuble collectif de 25 appartements et 10 maisons. Trente de ces logements sont proposés en prêt social location-accession (PSLA), commercialisés avec SOLIHA. Les travaux démarreront le <strong>4 janvier 2027</strong> ; TEC prépare actuellement le planning d'exécution et l'organisation du chantier.</p>
+  title="Horizon Belledonne : consultation achevée, démarrage du chantier le 4 janvier 2027",
+  desc="À La Terrasse, la consultation des entreprises d'Horizon Belledonne est achevée : le chantier de 25 appartements et 10 maisons démarre le 4 janvier 2027.",
+  body="""<p>Dans le Grésivaudan, l'opération <strong>Horizon Belledonne</strong> réunit sur un même site un immeuble collectif de 25 appartements et 10 maisons. Trente de ces logements sont proposés en prêt social location-accession (PSLA), commercialisés avec SOLIHA.</p>
+<h2>Consultation achevée, démarrage le 4 janvier 2027</h2>
+<p>La <strong>consultation des entreprises est achevée</strong> : les lots sont attribués et le chantier démarrera le <strong>4 janvier 2027</strong>. D'ici là, TEC met au point le planning d'exécution tous corps d'état, l'installation de chantier et la période de préparation avec les entreprises retenues.</p>
 <h2>Deux chantiers en un</h2>
 <p>Un collectif et des maisons n'ont ni les mêmes entreprises, ni les mêmes cadences, ni les mêmes contraintes d'accès. Le planning d'exécution doit donc :</p>
 <ul>
