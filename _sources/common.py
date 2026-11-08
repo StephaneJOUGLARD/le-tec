@@ -11,7 +11,7 @@ PHONE = "06 62 37 27 90"; PHONE_INTL = "+33662372790"
 EMAIL = "contact@le-tec.fr"
 PDF = "assets/docs/plaquette-TEC-pilotage-ingenierie.pdf"
 OUT = "/home/claude/tec/site"
-ASSET_V = "20261108b"  # à incrémenter à chaque modification du CSS ou du JS (vide le cache des navigateurs)
+ASSET_V = "20261108c"  # à incrémenter à chaque modification du CSS ou du JS (vide le cache des navigateurs)
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -47,9 +47,13 @@ METIERS = [
  ("economie-de-la-construction.html", "eco", "Économie de la construction & AMO", "Estimations, CCTP, consultation des entreprises, budget et assistance MOA."),
 ]
 
+SOON = {"economie-de-la-construction.html"}  # métiers affichés « Prochainement » (grisés, non cliquables, page non publiée)
+LIVE = [m for m in METIERS if m[0] not in SOON]
+
 def nav(p, current):
     def cur(href): return ' aria-current="page"' if current == href else ''
-    drop = "".join(f'<a href="{p}{h}"><span class="ico">{icon(ic)}</span><span><b>{t}</b><small>{d}</small></span></a>' for h, ic, t, d in METIERS)
+    drop = "".join((f'<span class="drop-soon" aria-disabled="true"><span class="ico">{icon(ic)}</span><span><b>{t}</b><small>Prochainement</small></span></span>' if h in SOON
+                    else f'<a href="{p}{h}"><span class="ico">{icon(ic)}</span><span><b>{t}</b><small>{d}</small></span></a>') for h, ic, t, d in METIERS)
     return f'''<a class="skip" href="#contenu">Aller au contenu</a>
 <header class="site-header">
  <div class="wrap nav">
@@ -72,7 +76,7 @@ def nav(p, current):
 </header>'''
 
 def footer(p):
-    met = "".join(f'<li><a href="{p}{h}">{t.split(" — ")[0]}</a></li>' for h, ic, t, d in METIERS)
+    met = "".join((f'<li class="soon">{t.split(" — ")[0]} <small>(prochainement)</small></li>' if h in SOON else f'<li><a href="{p}{h}">{t.split(" — ")[0]}</a></li>') for h, ic, t, d in METIERS)
     return f'''<footer class="site-footer">
  <div class="wrap">
   <div class="f-top">

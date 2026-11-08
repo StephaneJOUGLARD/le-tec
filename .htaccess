@@ -37,3 +37,6 @@ AddType application/rss+xml .xml
 <FilesMatch "\.(md|py)$">
   Require all denied
 </FilesMatch>
+
+# Métier « Économie de la construction & AMO » : prochainement
+Redirect 302 /economie-de-la-construction.html https://le-tec.fr/nos-metiers.html

@@ -12,7 +12,6 @@
 - [Maîtrise d'œuvre d'exécution](https://le-tec.fr/maitrise-oeuvre-execution.html): DCE, marchés, visas EXE, direction de l'exécution des travaux et réception.
 - [Suivi de chantier](https://le-tec.fr/suivi-de-chantier.html): Présence terrain, réunions hebdomadaires, comptes rendus et contrôle qualité.
 - [OPC — Ordonnancement, pilotage, coordination](https://le-tec.fr/opc-ordonnancement-pilotage-coordination.html): Planning tous corps d'état, synchronisation des lots et tenue des délais.
-- [Économie de la construction & AMO](https://le-tec.fr/economie-de-la-construction.html): Estimations, CCTP, consultation des entreprises, budget et assistance MOA.
 
 ## Pages clés
 - [Références](https://le-tec.fr/references.html)

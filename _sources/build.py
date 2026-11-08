@@ -41,7 +41,8 @@ gantt_rows = [("Gros œuvre", 0, 34, "done"), ("Charpente · couverture", 30, 18
               ("Peinture · finitions", 72, 18, ""), ("Réception", 93, 0, "ms")]
 grows = "".join(f'<div class="g-row"><span>{n}</span><div class="g-track"><i class="g-bar {c}" style="left:{l}%;width:{w}%;animation-delay:{i*0.12:.2f}s"><i></i></i></div></div>' for i, (n, l, w, c) in enumerate(gantt_rows))
 months = "".join(f"<span>{m}</span>" for m in ["J","F","M","A","M","J","J","A","S","O","N","D"])
-met_cards = "".join(f'''<a class="card reveal" href="{{P}}{h}"><span class="go">{icon("arrow")}</span><span class="ico">{icon(ic)}</span><span class="num">0{i+1}</span><h3>{t}</h3><p>{d}</p></a>''' for i, (h, ic, t, d) in enumerate(METIERS))
+met_cards = "".join((f'''<div class="card card--soon reveal" aria-disabled="true"><span class="soon-tag">Prochainement</span><span class="ico">{icon(ic)}</span><span class="num">0{i+1}</span><h3>{t}</h3><p>{d}</p></div>''' if h in SOON else
+                     f'''<a class="card reveal" href="{{P}}{h}"><span class="go">{icon("arrow")}</span><span class="ico">{icon(ic)}</span><span class="num">0{i+1}</span><h3>{t}</h3><p>{d}</p></a>''') for i, (h, ic, t, d) in enumerate(METIERS))
 steps = [("01","Conception","Faisabilité, esquisses, APD, autorisations"),("02","Consultation","DCE, CCTP, analyse des offres, marchés"),
          ("03","Préparation","Visas EXE, planning TCE, installation de chantier"),("04","Exécution","DET, OPC, réunions et comptes rendus hebdomadaires"),
          ("05","Réception","OPR, procès-verbaux, levée des réserves, DOE"),("06","Après livraison","Parfait achèvement, suivi des garanties")]
@@ -154,12 +155,13 @@ pages.append(page("nos-metiers.html", "Nos métiers : MOE d'exécution, OPC, sui
 
 # ======================= PAGES SERVICES =======================
 for path, s in SERVICES.items():
+    if path in SOON: continue
     name = [t for h, ic, t, d in METIERS if h == path][0]
     b = page_hero([("Accueil","index.html"),("Nos métiers","nos-metiers.html"),(s["eyebrow"],path)], s["eyebrow"], s["h1"], s["lead"],
         f'<div class="hero-actions mt-2"><a class="btn btn--red" href="{{P}}contact.html">Demander une proposition {icon("arrow")}</a></div>')
     checks = "".join(f"<li>{c}</li>" for c in s["checks"])
     phases = "".join(f'<div class="phase reveal"><span class="code">{c}</span><div><h3>{t}</h3><p>{d}</p></div></div>' for c, t, d in s["phases"])
-    others = "".join(f'<li><a href="{{P}}{h}">{t}</a></li>' for h, ic, t, d in METIERS if h != path)
+    others = "".join(f'<li><a href="{{P}}{h}">{t}</a></li>' for h, ic, t, d in LIVE if h != path)
     b += f'''<section class="section"><div class="wrap layout">
 <div>
  <div class="prose">{s["intro"]}</div>
@@ -365,7 +367,7 @@ b = page_hero([("Accueil","index.html"),("Page introuvable","404.html")], "Erreu
 pages.append(page("404.html", "Page introuvable — TEC", "Page introuvable.", b, extra_head='<meta name="robots" content="noindex">\n'))
 
 # plan du site
-links = [("Accueil","index.html"),("Nos métiers","nos-metiers.html")] + [(t,h) for h,ic,t,d in METIERS] + [("Références","references.html"),("L'agence","agence.html"),("Blog chantiers","blog/index.html")] \
+links = [("Accueil","index.html"),("Nos métiers","nos-metiers.html")] + [(t,h) for h,ic,t,d in LIVE] + [("Références","references.html"),("L'agence","agence.html"),("Blog chantiers","blog/index.html")] \
   + [("— "+x["title"], "blog/"+x["slug"]+".html") for x in BLOG] + [("Actualités","actualites/index.html")] + [("— "+x["title"], "actualites/"+x["slug"]+".html") for x in ACTU] \
   + [("Contact","contact.html"),("Mentions légales","mentions-legales.html"),("Confidentialité","confidentialite.html"),("Plaquette (PDF)", PDF)]
 b = page_hero([("Accueil","index.html"),("Plan du site","plan-du-site.html")], "Navigation", "Plan du site", "Toutes les pages du site le-tec.fr.")
@@ -410,7 +412,7 @@ llms = f"""# TEC — Pilotage & Ingénierie (le-tec.fr)
 - Références : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), MTI à Claix (bâtiment industriel réaménagé en site occupé pour CGBI, livré en 2026), SiPearl à Grenoble (500 m² de bureaux en moins de 7 semaines, pour CGBI), SiPearl à Sophia Antipolis (bureaux réhabilités en site occupé en moins de 7 semaines, pour CGBI), Keolis à Goncelin (locaux d'activité rénovés et remis aux normes, site en exploitation, pour CGBI), AD Santé à Domène (extension puis réhabilitation de l'existant en site occupé, pour CGBI), Soliha à Eybens (bureaux, pour CGBI).
 
 ## Métiers
-""" + "\n".join(f"- [{t}]({SITE}/{h}): {d}" for h, ic, t, d in METIERS) + f"""
+""" + "\n".join(f"- [{t}]({SITE}/{h}): {d}" for h, ic, t, d in LIVE) + f"""
 
 ## Pages clés
 - [Références]({SITE}/references.html)

@@ -411,3 +411,14 @@ img{height:auto}
 .post-thumb{height:0;padding-top:56.25%;aspect-ratio:auto}
 .ref-visual{height:0;padding-top:62.5%;aspect-ratio:auto}
 .art-fig img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+
+/* Métier « Prochainement » : grisé, non cliquable */
+.card--soon{background:#f1f1ee;border-style:dashed;cursor:default;opacity:.75}
+.card--soon h3,.card--soon p{color:var(--muted)}
+.card--soon .ico{background:#e4e4df;color:var(--muted-2)}
+.card--soon .soon-tag{position:absolute;top:22px;right:22px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 10px}
+.drop .drop-soon{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:11px 12px;border-radius:10px;color:var(--muted-2);cursor:default;opacity:.7}
+.drop .drop-soon b{display:block;font-family:var(--f-d);font-stretch:108%;font-size:15px;color:var(--muted)}
+.drop .drop-soon small{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.site-footer li.soon{opacity:.55}
+.site-footer li.soon small{font-size:.85em}
