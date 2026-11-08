@@ -91,10 +91,10 @@ BLOG = [
 <li>PPSPS et visite d'inspection commune un mois avant toute intervention.</li>
 </ul>
 <p>Des règles simples, rappelées à chaque compte rendu, qui structurent un chantier de près de deux ans.</p>"""),
- dict(slug="horizon-belledonne-la-terrasse", date="2026-10-15", ref="horizon-belledonne", cat="Horizon Belledonne",
+ dict(slug="horizon-belledonne-la-terrasse", date="2026-11-08", ref="horizon-belledonne", cat="Horizon Belledonne",
   title="Horizon Belledonne : piloter un chantier mixte collectif et maisons",
-  desc="À La Terrasse, TEC pilote Horizon Belledonne : 25 appartements et 10 maisons, dont 30 logements en accession sociale PSLA avec SOLIHA.",
-  body="""<p>Dans le Grésivaudan, l'opération <strong>Horizon Belledonne</strong> réunit sur un même site un immeuble collectif de 25 appartements et 10 maisons. Trente de ces logements sont proposés en prêt social location-accession (PSLA), commercialisés avec SOLIHA.</p>
+  desc="À La Terrasse, le chantier Horizon Belledonne démarre le 4 janvier 2027 : 25 appartements et 10 maisons, dont 30 logements en PSLA avec SOLIHA.",
+  body="""<p>Dans le Grésivaudan, l'opération <strong>Horizon Belledonne</strong> réunit sur un même site un immeuble collectif de 25 appartements et 10 maisons. Trente de ces logements sont proposés en prêt social location-accession (PSLA), commercialisés avec SOLIHA. Les travaux démarreront le <strong>4 janvier 2027</strong> ; TEC prépare actuellement le planning d'exécution et l'organisation du chantier.</p>
 <h2>Deux chantiers en un</h2>
 <p>Un collectif et des maisons n'ont ni les mêmes entreprises, ni les mêmes cadences, ni les mêmes contraintes d'accès. Le planning d'exécution doit donc :</p>
 <ul>
@@ -102,7 +102,7 @@ BLOG = [
 <li>caler les lots communs (VRD, réseaux, raccordements) sur les deux typologies ;</li>
 <li>tenir un calendrier de livraison compatible avec le parcours des accédants en PSLA.</li>
 </ul>
-<p>Nous publierons ici les grandes étapes du chantier.</p>"""),
+<p>Nous publierons ici les grandes étapes du chantier, à commencer par son démarrage en janvier.</p>"""),
  dict(slug="travaux-en-site-occupe-cgbi", date="2026-09-18", ref="soliha-eybens", cat="Chantiers CGBI",
   title="Travaux en site occupé : notre méthode sur les chantiers CGBI",
   desc="MTI à Claix, SiPearl à Grenoble, AD Santé à Domène, Soliha à Eybens : comment TEC organise des travaux sans arrêter l'activité.",

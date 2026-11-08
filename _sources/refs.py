@@ -90,7 +90,7 @@ REFS = [
  dict(slug="horizon-belledonne", kind="belledonne", name="Horizon Belledonne", loc="La Terrasse (38) · Isère", typo="logement",
       typ="25 appartements et 10 maisons, dont 30 logements en accession sociale (PSLA)", mo="SCCV Horizon Belledonne, en partenariat avec SOLIHA",
       archi="—", mission="Pilotage de l'exécution et coordination des entreprises",
-      dates="Mission en cours", status="En cours", phase="",
+      dates="Démarrage des travaux le 4 janvier 2027", status="En préparation", phase="Préparation de chantier",
       lots="Opération mixte collectif + individuel",
       text="Programme mixte dans le Grésivaudan, face à la chaîne de Belledonne : un collectif et des maisons, majoritairement en prêt social location-accession (PSLA). Le pilotage doit concilier deux typologies de chantier sur un même site et un calendrier de commercialisation sociale.",
       facts=["35 logements", "PSLA", "Collectif + maisons"]),
