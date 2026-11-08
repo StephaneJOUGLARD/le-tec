@@ -106,7 +106,7 @@ BLOG = [
  dict(slug="travaux-en-site-occupe-cgbi", date="2026-09-18", ref="soliha-eybens", cat="Chantiers CGBI",
   title="Travaux en site occupé : notre méthode sur les chantiers CGBI",
   desc="MTI à Claix, SiPearl à Grenoble, AD Santé à Domène, Soliha à Eybens : comment TEC organise des travaux sans arrêter l'activité.",
-  body="""<p>Pour le compte de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général en immobilier d'entreprise, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, 500 m² de bureaux aménagés en moins de sept semaines chez SiPearl à Grenoble, extension puis réhabilitation des locaux d'AD Santé à Domène, réorganisation de plateaux de bureaux chez Soliha à Eybens.</p>
+  body="""<p>Pour le compte de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général en immobilier d'entreprise, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, 500 m² de bureaux aménagés en moins de sept semaines chez SiPearl à Grenoble, extension puis réhabilitation des locaux d'AD Santé à Domène, réorganisation de plateaux de bureaux chez Soliha à Eybens, rénovation et remise aux normes des locaux de Keolis à Goncelin, et un second chantier SiPearl à Sophia Antipolis.</p>
 <h2>Cinq principes</h2>
 <ol>
 <li><strong>Phaser par zones</strong> pour que l'activité se poursuive dans les parties non concernées.</li>

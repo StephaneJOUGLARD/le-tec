@@ -203,7 +203,7 @@ b += f'''<section class="section"><div class="wrap">{filt}{det}
 <div><ul class="checks"><li><b>Logements collectifs</b> en accession libre et sociale</li><li><b>Programmes mixtes</b> collectif et individuel</li><li><b>Industrie et tertiaire</b>, y compris en site occupé, pour des contractants généraux</li><li><b>Réhabilitation</b> de bâtis existants</li></ul></div>
 </div></section>{cta_band()}'''
 pages.append(page("references.html", "Références chantiers en Isère, Savoie, Hautes-Alpes | TEC",
-  "Élément à Embrun, Les Jardins de Babylone, Horizon Belledonne, MTI, SiPearl, AD Santé et Soliha pour CGBI : les opérations pilotées par TEC.",
+  "Élément à Embrun, Les Jardins de Babylone, Horizon Belledonne, MTI, SiPearl, AD Santé, Keolis et Soliha pour CGBI : les opérations pilotées par TEC.",
   b, current="references.html", crumbs=[("Accueil",""),("Références","references.html")]))
 
 # ======================= AGENCE =======================
@@ -407,7 +407,7 @@ llms = f"""# TEC — Pilotage & Ingénierie (le-tec.fr)
 - Directeur général : Benjamin Camerino. Responsable technique : David Durigon. Cheffe de projet conception : Sandra Olandese.
 - Adresse : Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble. Téléphone : {PHONE}. E-mail : {EMAIL}.
 - SAS au capital de 5 000 €, RCS Grenoble 941 810 749, créée en mars 2025.
-- Références : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), MTI à Claix (bâtiment industriel réaménagé en site occupé pour CGBI, livré en 2026), SiPearl à Grenoble (500 m² de bureaux en moins de 7 semaines, pour CGBI), AD Santé à Domène (extension puis réhabilitation de l'existant en site occupé, pour CGBI), Soliha à Eybens (bureaux, pour CGBI).
+- Références : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), MTI à Claix (bâtiment industriel réaménagé en site occupé pour CGBI, livré en 2026), SiPearl à Grenoble (500 m² de bureaux en moins de 7 semaines, pour CGBI), SiPearl à Sophia Antipolis (bureaux réhabilités en site occupé en moins de 7 semaines, pour CGBI), Keolis à Goncelin (locaux d'activité rénovés et remis aux normes, site en exploitation, pour CGBI), AD Santé à Domène (extension puis réhabilitation de l'existant en site occupé, pour CGBI), Soliha à Eybens (bureaux, pour CGBI).
 
 ## Métiers
 """ + "\n".join(f"- [{t}]({SITE}/{h}): {d}" for h, ic, t, d in METIERS) + f"""
