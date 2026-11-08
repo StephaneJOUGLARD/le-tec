@@ -158,7 +158,7 @@ p4 = f'''<section class="pg"><div class="pad">
 <div class="steps">{sh}</div>
 <div class="eb">Références — chantiers en cours</div>
 <div class="refs">{rh}</div>
-<p class="others"><b>Industrie et tertiaire, pour CGBI :</b> MTI à Claix (bâtiment industriel réaménagé en site occupé en 7 mois, livré en 2026) · SiPearl à Grenoble et à Sophia Antipolis (bureaux livrés en moins de 7 semaines) · Keolis à Goncelin (locaux d'activité remis aux normes) · AD Santé à Domène (extension, puis réhabilitation de l'existant, en site occupé) · Soliha à Eybens (plateaux de bureaux).</p>
+<p class="others"><b>Industrie et tertiaire, pour CGBI :</b> Holding Baffert à Saint-Christophe-sur-Guiers (bâtiment d'activité neuf) · MTI à Claix (réaménagé en site occupé, livré en 2026) · SiPearl à Grenoble et à Sophia Antipolis (bureaux livrés en moins de 7 semaines) · Keolis à Goncelin (mise aux normes) · AD Santé à Domène (extension puis réhabilitation) · Soliha à Eybens (bureaux).</p>
 <div class="eb" style="margin-top:7mm">Pourquoi nous confier votre chantier</div>
 <div class="why"><div><b>Continuité</b>L'équipe qui prépare la consultation est celle qui pilote et réceptionne.</div><div><b>Présence terrain</b>Une réunion de chantier chaque semaine, des comptes rendus qui engagent.</div><div><b>Maîtrise des coûts</b>Situations validées chaque mois, travaux modificatifs chiffrés avant exécution.</div><div><b>Ancrage alpin</b>Métropole grenobloise, Grésivaudan, Maurienne, Chablais, Champsaur, Embrunais.</div></div>
 </div>
