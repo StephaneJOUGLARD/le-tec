@@ -17,15 +17,6 @@ BLOG = [
 <p>TEC assurait la maîtrise d'œuvre d'exécution et le pilotage des travaux : coordination des entreprises, phasage des interventions avec l'exploitant, contrôle de l'avancement et validation des situations mensuelles avant facturation.</p>
 <div class="callout"><h4>Une clôture financière maîtrisée</h4><p>Entre juin et septembre 2026, chaque lot a été soldé par un décompte général définitif (DGD) établi à partir des situations validées par TEC. Une étape souvent négligée, qui conditionne pourtant la sérénité du maître d'ouvrage après la livraison.</p></div>
 <p>Une référence de plus pour TEC en immobilier d'entreprise, où la tenue des délais se mesure aussi à la continuité de l'activité du client.</p>"""),
- dict(slug="soliha-meylan-rehabilitation-logement-social", date="2026-10-12", ref="soliha-meylan", cat="Soliha Meylan",
-  title="Soliha à Meylan : un bâti vacant bientôt transformé en logement social",
-  desc="Pour CGBI, réhabilitation d'un tènement vacant et de son cabanon en logement locatif social à Meylan : 11 lots, travaux programmés d'octobre 2026 à juin 2027.",
-  body="""<p>À Meylan, <strong>SOLIHA</strong> engage la réhabilitation d'un tènement immobilier vacant et de son cabanon pour créer un <strong>logement locatif social</strong>. L'opération est réalisée par <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, pour le compte duquel TEC a établi le planning des travaux et coordonnera le chantier.</p>
-<h2>Onze lots, neuf mois</h2>
-<p>Démolition et maçonnerie, charpente-couverture-zinguerie, menuiseries extérieures et intérieures, plâtrerie-isolation, carrelage, électricité, plomberie-ventilation, chauffage avec contrat de maintenance, peintures et façades : le calendrier s'étend d'octobre 2026, avec la période de préparation, jusqu'à la réception prévue en juin 2027.</p>
-<h2>Réhabiliter, c'est composer avec l'existant</h2>
-<p>Sur un bâti ancien, le planning doit intégrer les inconnues : état réel de la charpente, reprises de maçonnerie, réseaux à reprendre entièrement. C'est pourquoi la période de préparation est essentielle : diagnostics complémentaires, réservations, commandes des menuiseries à délai long.</p>
-<p>Nous publierons ici les grandes étapes du chantier.</p>"""),
  dict(slug="element-embrun-derniere-ligne-droite", date="2026-11-03", ref="element-embrun", cat="Élément · Embrun",
   title="Élément à Embrun : la dernière ligne droite avant la livraison",
   desc="Façades, ascenseurs, peintures, espaces verts : point d'avancement du chantier Élément (44 logements, Embrun) au compte rendu n°63.",
@@ -114,8 +105,8 @@ BLOG = [
 <p>Nous publierons ici les grandes étapes du chantier.</p>"""),
  dict(slug="travaux-en-site-occupe-cgbi", date="2026-09-18", ref="soliha-eybens", cat="Chantiers CGBI",
   title="Travaux en site occupé : notre méthode sur les chantiers CGBI",
-  desc="Rénovation industrielle chez MTI à Claix, réaménagement de bureaux chez Soliha à Eybens : comment TEC organise des travaux sans arrêter l'activité.",
-  body="""<p>Pour le compte de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général en immobilier d'entreprise, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, aménagement et réorganisation de plateaux de bureaux chez Soliha à Eybens.</p>
+  desc="MTI à Claix, SiPearl à Grenoble, AD Santé à Domène, Soliha à Eybens : comment TEC organise des travaux sans arrêter l'activité.",
+  body="""<p>Pour le compte de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général en immobilier d'entreprise, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, 500 m² de bureaux aménagés en moins de sept semaines chez SiPearl à Grenoble, rénovation complète des locaux existants d'AD Santé à Domène, réorganisation de plateaux de bureaux chez Soliha à Eybens.</p>
 <h2>Cinq principes</h2>
 <ol>
 <li><strong>Phaser par zones</strong> pour que l'activité se poursuive dans les parties non concernées.</li>
@@ -124,7 +115,16 @@ BLOG = [
 <li><strong>Sécuriser</strong> : consignations, plans de prévention, information du personnel.</li>
 <li><strong>Communiquer</strong> : un point régulier avec le référent du client, en plus des réunions de chantier.</li>
 </ol>
-<p>Le planning n'est plus seulement celui des entreprises : c'est aussi celui de l'utilisateur, qui doit savoir à chaque étape quelles zones lui sont accessibles.</p>"""),
+<p>Le planning n'est plus seulement celui des entreprises : c'est aussi celui de l'utilisateur, qui doit savoir à chaque étape quelles zones lui sont accessibles. Chez AD Santé, chaque zone rénovée a ainsi été rendue aux équipes dès son achèvement, avec un point quotidien entre le chantier et l'exploitant.</p>"""),
+ dict(slug="sipearl-grenoble-bureaux-sept-semaines", date="2026-10-20", ref="sipearl-grenoble", cat="Chantiers CGBI",
+  title="SiPearl à Grenoble : 500 m² de bureaux aménagés en moins de sept semaines",
+  desc="Pour CGBI, TEC a piloté l'aménagement des bureaux de SiPearl à Grenoble : 500 m² en site occupé, livrés en moins de sept semaines.",
+  body="""<p>Concepteur européen de microprocesseurs haute performance pour le calcul intensif et l'intelligence artificielle, <strong>SiPearl</strong> avait besoin d'un espace de travail à la mesure de sa croissance à Grenoble. <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général tous corps d'état, a aménagé un plateau de <strong>500 m²</strong> au 10e étage ; TEC en a assuré la planification et le pilotage.</p>
+<h2>Un calendrier très court</h2>
+<p>Moins de sept semaines séparaient la conception de la remise des clés. Sur une durée aussi courte, il n'y a pas de marge pour rattraper un retard : les commandes à délai long sont lancées dès la validation des plans, les interventions des corps d'état se chevauchent par zones et chaque réunion de chantier arbitre les points bloquants de la semaine suivante.</p>
+<h2>Des espaces aux usages différents</h2>
+<p>Espaces collaboratifs, salles de réunion, zones techniques sur sol antistatique, espaces de détente : chaque usage a ses exigences de réseaux, d'acoustique et de finitions, que le planning doit séquencer sans à-coups.</p>
+<div class="callout"><h4>En site occupé</h4><p>Les travaux ont été phasés pour que les équipes de SiPearl poursuivent leur activité pendant toute la durée du chantier.</p></div>"""),
 ]
 
 ACTU = [

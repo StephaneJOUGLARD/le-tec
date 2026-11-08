@@ -154,7 +154,7 @@ p4 = f'''<section class="pg"><div class="pad">
 <div class="steps">{sh}</div>
 <div class="eb">Références — chantiers en cours</div>
 <div class="refs">{rh}</div>
-<p class="others"><b>Industrie et tertiaire, pour CGBI :</b> MTI à Claix (bâtiment industriel réaménagé en site occupé en 7 mois, livré en 2026) · Soliha à Eybens (plateaux de bureaux) · Soliha à Meylan (réhabilitation en logement locatif social, 2026-2027).</p>
+<p class="others"><b>Industrie et tertiaire, pour CGBI :</b> MTI à Claix (bâtiment industriel réaménagé en site occupé en 7 mois, livré en 2026) · SiPearl à Grenoble (500 m² de bureaux en moins de 7 semaines) · AD Santé à Domène (extension et rénovation complète en site occupé) · Soliha à Eybens (plateaux de bureaux).</p>
 <div class="eb" style="margin-top:7mm">Pourquoi nous confier votre chantier</div>
 <div class="why"><div><b>Continuité</b>L'équipe qui prépare la consultation est celle qui pilote et réceptionne.</div><div><b>Présence terrain</b>Une réunion de chantier chaque semaine, des comptes rendus qui engagent.</div><div><b>Maîtrise des coûts</b>Situations validées chaque mois, travaux modificatifs chiffrés avant exécution.</div><div><b>Ancrage alpin</b>Métropole grenobloise, Grésivaudan, Maurienne, Chablais, Champsaur, Embrunais.</div></div>
 </div>

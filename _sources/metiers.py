@@ -92,5 +92,5 @@ SERVICES = {
  faq=[("Que fait un économiste de la construction ?", "Il évalue et maîtrise le coût d'un projet : estimations à chaque phase, métrés, rédaction des pièces écrites (CCTP), consultation des entreprises, analyse des offres et suivi financier des travaux."),
       ("Qu'est-ce qu'une mission d'AMO ?", "L'assistance à maîtrise d'ouvrage consiste à conseiller le maître d'ouvrage : définition du programme et du budget, choix de la procédure et des intervenants, contrôle des coûts et du calendrier. L'AMO ne conçoit pas et ne dirige pas les travaux."),
       ("Intégrez-vous les exigences RE2020 dans les estimations ?", "Oui. Les choix de structure, d'isolation et de systèmes ont un impact direct sur les indicateurs carbone et sur le coût : nous les chiffrons en lien avec les bureaux d'études thermiques.")],
- refs=["mti-claix", "soliha-eybens"]),
+ refs=["mti-claix", "sipearl-grenoble", "ad-sante-domene"]),
 }
