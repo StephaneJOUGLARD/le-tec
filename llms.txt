@@ -1,0 +1,34 @@
+# TEC — Pilotage & Ingénierie (le-tec.fr)
+
+> TEC (Technique et Économie de la Construction) est un bureau d'ingénierie de chantier basé à Grenoble (38), filiale du Groupe Novélia. TEC assure la maîtrise d'œuvre d'exécution (MOEX : DCE, ACT, VISA, DET, AOR), l'OPC (ordonnancement, pilotage, coordination), le suivi de chantier, l'économie de la construction, l'assistance à maîtrise d'ouvrage et l'accompagnement à la conception architecturale, pour des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.
+
+- Directeur général : Benjamin Camerino. Responsable technique : David Durigon. Cheffe de projet conception : Sandra Olandese.
+- Adresse : Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble. Téléphone : 04 76 42 64 91. E-mail : contact@le-tec.fr.
+- SAS au capital de 5 000 €, RCS Grenoble 941 810 749, créée en mars 2025.
+- Chantiers en cours : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), chantiers CGBI pour MTI (Claix) et Soliha (Eybens).
+
+## Métiers
+- [Conception architecturale](https://le-tec.fr/conception-architecturale.html): Faisabilité, esquisses, plans et dossiers d'autorisation, en lien avec l'architecte.
+- [Maîtrise d'œuvre d'exécution](https://le-tec.fr/maitrise-oeuvre-execution.html): DCE, marchés, visas EXE, direction de l'exécution des travaux et réception.
+- [Suivi de chantier](https://le-tec.fr/suivi-de-chantier.html): Présence terrain, réunions hebdomadaires, comptes rendus et contrôle qualité.
+- [OPC — Ordonnancement, pilotage, coordination](https://le-tec.fr/opc-ordonnancement-pilotage-coordination.html): Planning tous corps d'état, synchronisation des lots et tenue des délais.
+- [Économie de la construction & AMO](https://le-tec.fr/economie-de-la-construction.html): Estimations, CCTP, consultation des entreprises, budget et assistance MOA.
+
+## Pages clés
+- [Références](https://le-tec.fr/references.html)
+- [L'agence et l'équipe](https://le-tec.fr/agence.html)
+- [Blog chantiers](https://le-tec.fr/blog/index.html)
+- [Actualités juridiques et techniques 2026](https://le-tec.fr/actualites/index.html)
+- [Plaquette PDF](https://le-tec.fr/assets/docs/plaquette-TEC-pilotage-ingenierie.pdf)
+- [Contact](https://le-tec.fr/contact.html)
+
+## Actualités
+- [Déchets de chantier : hausse des éco-contributions et refonte de la REP PMCB](https://le-tec.fr/actualites/rep-pmcb-dechets-chantier-2026.html)
+- [DPE : le coefficient de l'électricité passé à 1,9 en 2026, il descendra à 1,7 au 1er janvier 2027](https://le-tec.fr/actualites/dpe-coefficient-electricite-2026-2027.html)
+- [Facturation électronique : depuis le 1er septembre 2026, toutes les entreprises du BTP doivent pouvoir recevoir des factures électroniques](https://le-tec.fr/actualites/facturation-electronique-btp-septembre-2026.html)
+- [Directive européenne sur la performance énergétique des bâtiments : l'échéance de transposition est passée](https://le-tec.fr/actualites/directive-epbd-transposition-batiments-zero-emission.html)
+- [RE2020 : les ajustements du décret du 18 mars 2026 s'appliquent aux permis déposés depuis le 1er juillet](https://le-tec.fr/actualites/re2020-decret-18-mars-2026-ajustements.html)
+- [Loi de simplification de la vie économique : ce qui change pour la construction](https://le-tec.fr/actualites/loi-simplification-vie-economique-construction.html)
+- [Loi « Huwart » : les mesures différées de simplification de l'urbanisme sont entrées en vigueur](https://le-tec.fr/actualites/loi-huwart-simplification-urbanisme-27-mai-2026.html)
+- [RE2020 : depuis le 1er mai 2026, quasiment tous les bâtiments neufs y sont soumis](https://le-tec.fr/actualites/re2020-batiments-tertiaires-1er-mai-2026.html)
+- [Maître d'ouvrage, maître d'œuvre, MOE d'exécution, OPC, AMO : qui fait quoi sur un chantier ?](https://le-tec.fr/actualites/moe-moa-opc-amo-qui-fait-quoi.html)
