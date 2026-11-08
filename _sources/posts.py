@@ -17,7 +17,7 @@ BLOG = [
 <p>TEC assurait la maîtrise d'œuvre d'exécution et le pilotage des travaux : coordination des entreprises, phasage des interventions avec l'exploitant, contrôle de l'avancement et validation des situations mensuelles avant facturation.</p>
 <div class="callout"><h4>Une clôture financière maîtrisée</h4><p>Entre juin et septembre 2026, chaque lot a été soldé par un décompte général définitif (DGD) établi à partir des situations validées par TEC. Une étape souvent négligée, qui conditionne pourtant la sérénité du maître d'ouvrage après la livraison.</p></div>
 <p>Une référence de plus pour TEC en immobilier d'entreprise, où la tenue des délais se mesure aussi à la continuité de l'activité du client.</p>"""),
- dict(slug="element-embrun-derniere-ligne-droite", date="2026-11-03", ref="element-embrun", cat="Élément · Embrun",
+ dict(slug="element-embrun-derniere-ligne-droite", img="element-embrun-derniere-ligne-droite", cap="Élément, Embrun — façades et balcons, octobre 2026", date="2026-11-03", ref="element-embrun", cat="Élément · Embrun",
   title="Élément à Embrun : la dernière ligne droite avant la livraison",
   desc="Façades, ascenseurs, peintures, espaces verts : point d'avancement du chantier Élément (44 logements, Embrun) au compte rendu n°63.",
   body="""<p>Le compte rendu n°63, diffusé le 3 novembre 2026, marque l'entrée du chantier <strong>Élément</strong> dans sa phase finale. Dix-huit mois après l'ordre de service, les deux bâtiments de la résidence (44 logements en R+3 sur sous-sol) sont clos et couverts, et l'essentiel des travaux se concentre désormais sur les finitions, l'enveloppe et les abords.</p>
@@ -36,7 +36,7 @@ BLOG = [
 <blockquote>Sur la dernière ligne droite, le pilotage se joue sur la propreté, l'enchaînement des finitions et la protection des ouvrages déjà réalisés.</blockquote>
 <h2>Prochaines étapes</h2>
 <p>Pose des portes palières et intérieures du bâtiment B après carrelage, fin des peintures, enrobés et aménagement du parking, puis opérations préalables à la réception. La livraison reste programmée pour le début de l'année 2027.</p>"""),
- dict(slug="jardins-de-babylone-hors-d-eau-hors-d-air", date="2026-10-23", ref="jardins-de-babylone", cat="Les Jardins de Babylone",
+ dict(slug="jardins-de-babylone-hors-d-eau-hors-d-air", img="jardins-de-babylone-hors-d-eau-hors-d-air", cap="Les Jardins de Babylone, Saint-Jean-de-Maurienne — toiture et façades, septembre 2026", date="2026-10-23", ref="jardins-de-babylone", cat="Les Jardins de Babylone",
   title="Les Jardins de Babylone : hors d'eau, hors d'air, place au second œuvre",
   desc="Saint-Jean-de-Maurienne : gros œuvre, menuiseries et bardage terminés, cloisons en cours, ascenseur livré en novembre. Point d'étape au CR n°29.",
   body="""<p>Neuf mois après l'ordre de service du 14 janvier 2026, la résidence <strong>Les Jardins de Babylone</strong> (17 logements, Saint-Jean-de-Maurienne) a franchi une étape clé : le bâtiment est hors d'eau et hors d'air. Le compte rendu de chantier n°29 du 22 octobre 2026 fait le point.</p>
@@ -52,7 +52,7 @@ BLOG = [
 <div class="callout"><h4>Le rôle de TEC au quotidien</h4><p>Réunion hebdomadaire le jeudi à 14 h, validation mensuelle des situations de travaux, instruction des demandes d'agrément des sous-traitants (à déposer au moins quatre semaines avant intervention), visa des plans d'exécution en lien avec le bureau de contrôle.</p></div>
 <h2>Les prochaines étapes</h2>
 <p>Chapes prévues en semaine 49 selon l'avancement, puis carrelage début janvier 2027 — celui des balcons sera posé après les garde-corps, eux-mêmes posés après le ravalement des façades. Un enchaînement typique que le planning OPC permet de sécuriser.</p>"""),
- dict(slug="jardins-de-babylone-gros-oeuvre-r3", date="2026-05-07", ref="jardins-de-babylone", cat="Les Jardins de Babylone",
+ dict(slug="jardins-de-babylone-gros-oeuvre-r3", img="jardins-de-babylone-gros-oeuvre-r3", cap="Les Jardins de Babylone, Saint-Jean-de-Maurienne — planchers du R+3, avril 2026", date="2026-05-07", ref="jardins-de-babylone", cat="Les Jardins de Babylone",
   title="Les Jardins de Babylone : le gros œuvre atteint le R+3",
   desc="Élévations du dernier niveau fin avril, plancher haut coulé le 4 mai : le gros œuvre de la résidence de Saint-Jean-de-Maurienne touche au but.",
   body="""<p>Moins de quatre mois après l'ordre de service, le gros œuvre de la résidence <strong>Les Jardins de Babylone</strong> à Saint-Jean-de-Maurienne atteint son dernier niveau. Les élévations du R+3 ont débuté le vendredi 24 avril et le plancher haut a été coulé le lundi 4 mai 2026.</p>
@@ -65,7 +65,7 @@ BLOG = [
 </ul>
 <p>Pour les menuiseries intérieures, le choix de portes « fin de chantier » impose des réservations précises dans les cloisons : elles ont été fixées en réunion afin d'éviter toute reprise ultérieure.</p>
 <blockquote>Anticiper les interfaces entre lots, c'est gagner des semaines sur le chantier.</blockquote>"""),
- dict(slug="element-tests-etancheite-air", date="2026-04-14", ref="element-embrun", cat="Élément · Embrun",
+ dict(slug="element-tests-etancheite-air", img="element-tests-etancheite-air", cap="Élément, Embrun — toitures-terrasses, avril 2026", date="2026-04-14", ref="element-embrun", cat="Élément · Embrun",
   title="Élément : des tests d'étanchéité à l'air intermédiaires pour sécuriser la RE2020",
   desc="Le 7 avril 2026, trois logements témoins de la résidence Élément ont été testés en cours de chantier pour vérifier la perméabilité à l'air avant les finitions.",
   body="""<p>Sur la résidence <strong>Élément</strong> à Embrun, TEC a organisé le 7 avril 2026 des tests intermédiaires d'étanchéité à l'air sur trois logements témoins, répartis à différents niveaux du bâtiment A. Le rapport a été reçu le 13 avril.</p>
@@ -77,7 +77,7 @@ BLOG = [
 <li>sécuriser la mesure finale et l'attestation de fin de chantier.</li>
 </ul>
 <div class="callout"><h4>Bon réflexe</h4><p>Choisir des logements représentatifs (rez-de-chaussée, étage courant, dernier niveau) et prévoir le test dans le planning OPC, comme une étape à part entière.</p></div>"""),
- dict(slug="element-embrun-demarrage", date="2025-06-04", ref="element-embrun", cat="Élément · Embrun",
+ dict(slug="element-embrun-demarrage", img="element-embrun-demarrage", cap="Élément, Embrun — terrassements, mai 2025", date="2025-06-04", ref="element-embrun", cat="Élément · Embrun",
   title="Démarrage du chantier Élément à Embrun",
   desc="Ordre de service le 12 mai 2025 pour la résidence Élément (44 logements) : désamiantage, démolition et installation de chantier sous la direction de TEC.",
   body="""<p>Le chantier de la résidence <strong>Élément</strong>, 44 logements en accession libre rue Édouard-Przybylski à Embrun, a démarré avec l'ordre de service du 12 mai 2025. C'est l'une des premières missions de maîtrise d'œuvre d'exécution de TEC, créée quelques semaines plus tôt.</p>
