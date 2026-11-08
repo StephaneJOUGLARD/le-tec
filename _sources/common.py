@@ -11,6 +11,7 @@ PHONE = "06 62 37 27 90"; PHONE_INTL = "+33662372790"
 EMAIL = "contact@le-tec.fr"
 PDF = "assets/docs/plaquette-TEC-pilotage-ingenierie.pdf"
 OUT = "/home/claude/tec/site"
+ASSET_V = "20261108b"  # à incrémenter à chaque modification du CSS ou du JS (vide le cache des navigateurs)
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -101,7 +102,7 @@ def footer(p):
   </div>
  </div>
 </footer>
-<script src="{p}assets/js/main.js" defer></script>'''
+<script src="{p}assets/js/main.js?v={ASSET_V}" defer></script>'''
 
 ORG_LD = {
  "@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#organisation",
@@ -162,7 +163,7 @@ def page(path, title, desc, body, current="", ld=None, og_type="website", crumbs
 <link rel="apple-touch-icon" href="{p}apple-touch-icon.png">
 <link rel="preload" href="{p}assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{p}assets/fonts/intertight.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{p}assets/css/style.css">
+<link rel="stylesheet" href="{p}assets/css/style.css?v={ASSET_V}">
 <link rel="alternate" type="application/rss+xml" title="Actualités TEC" href="{SITE}/feed.xml">
 {extra_head}{ldtxt}
 </head>

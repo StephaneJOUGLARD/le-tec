@@ -1,0 +1,36 @@
+SITE le-tec.fr — MISE EN LIGNE SUR L'HÉBERGEMENT OVH
+====================================================
+
+Contenu : site statique (HTML/CSS/JS) + contact.php (formulaire) + .htaccess.
+Aucune base de données, aucun CMS : rapide, sûr, sans maintenance.
+
+1. Mise en ligne (FTP)
+   - Espace client OVH > Hébergements > le-tec.fr > FTP-SSH : récupérer identifiant et serveur FTP.
+   - Avec FileZilla, copier TOUT le contenu de ce dossier (y compris le fichier caché .htaccess)
+     dans le dossier "www" de l'hébergement.
+   - Multisite : vérifier que le domaine le-tec.fr pointe bien vers le dossier "www".
+   - Activer le certificat SSL Let's Encrypt (Hébergement > Multisite > SSL).
+
+   Variante recommandée (comme albedia.eu) : déposer ce dossier dans un dépôt GitHub
+   et activer l'intégration Git d'OVH (Hébergement > Multisite > Git) pour des mises à jour automatiques.
+
+2. Formulaire de contact
+   - contact.php envoie les demandes à contact@le-tec.fr (à modifier en ligne 4 si besoin).
+   - L'expéditeur technique no-reply@le-tec.fr doit appartenir au domaine (aucune boîte à créer).
+   - Tester un envoi après mise en ligne.
+
+3. Référencement
+   - Google Search Console : ajouter la propriété le-tec.fr, puis soumettre https://le-tec.fr/sitemap.xml
+   - Bing Webmaster Tools : même démarche (alimente aussi ChatGPT/Copilot).
+   - Créer / mettre à jour la fiche Google Business Profile "TEC — Pilotage & Ingénierie" (Grenoble)
+     avec un lien vers le site.
+   - llms.txt à la racine résume l'activité pour les moteurs de réponse IA (Claude, ChatGPT, Perplexity).
+
+4. Photos
+   - Les visuels des références sont des illustrations schématiques (SVG).
+     Pour les remplacer par des photos de chantier : nous transmettre les images,
+     elles seront intégrées dans assets/img/references/.
+
+5. Mises à jour
+   - Le site est généré à partir d'un script : nouveaux articles de blog / actualités
+     peuvent être ajoutés à la demande.
