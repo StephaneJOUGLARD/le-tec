@@ -106,7 +106,7 @@ BLOG = [
  dict(slug="travaux-en-site-occupe-cgbi", date="2026-09-18", ref="soliha-eybens", cat="Chantiers CGBI",
   title="Travaux en site occupé : notre méthode sur les chantiers CGBI",
   desc="MTI à Claix, SiPearl à Grenoble, AD Santé à Domène, Soliha à Eybens : comment TEC organise des travaux sans arrêter l'activité.",
-  body="""<p>Pour le compte de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général en immobilier d'entreprise, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, 500 m² de bureaux aménagés en moins de sept semaines chez SiPearl à Grenoble, rénovation complète des locaux existants d'AD Santé à Domène, réorganisation de plateaux de bureaux chez Soliha à Eybens.</p>
+  body="""<p>Pour le compte de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général en immobilier d'entreprise, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, 500 m² de bureaux aménagés en moins de sept semaines chez SiPearl à Grenoble, extension puis réhabilitation des locaux d'AD Santé à Domène, réorganisation de plateaux de bureaux chez Soliha à Eybens.</p>
 <h2>Cinq principes</h2>
 <ol>
 <li><strong>Phaser par zones</strong> pour que l'activité se poursuive dans les parties non concernées.</li>
@@ -115,7 +115,7 @@ BLOG = [
 <li><strong>Sécuriser</strong> : consignations, plans de prévention, information du personnel.</li>
 <li><strong>Communiquer</strong> : un point régulier avec le référent du client, en plus des réunions de chantier.</li>
 </ol>
-<p>Le planning n'est plus seulement celui des entreprises : c'est aussi celui de l'utilisateur, qui doit savoir à chaque étape quelles zones lui sont accessibles. Chez AD Santé, chaque zone rénovée a ainsi été rendue aux équipes dès son achèvement, avec un point quotidien entre le chantier et l'exploitant.</p>"""),
+<p>Le planning n'est plus seulement celui des entreprises : c'est aussi celui de l'utilisateur, qui doit savoir à chaque étape quelles zones lui sont accessibles. Chez AD Santé, le phasage a été pensé à l'échelle de toute l'opération : l'extension, construite en premier, a accueilli les équipes et libéré les locaux d'origine pour leur réhabilitation. Chaque zone rénovée a ensuite été rendue dès son achèvement, avec un point quotidien entre le chantier et l'exploitant.</p>"""),
  dict(slug="sipearl-grenoble-bureaux-sept-semaines", date="2026-10-20", ref="sipearl-grenoble", cat="Chantiers CGBI",
   title="SiPearl à Grenoble : 500 m² de bureaux aménagés en moins de sept semaines",
   desc="Pour CGBI, TEC a piloté l'aménagement des bureaux de SiPearl à Grenoble : 500 m² en site occupé, livrés en moins de sept semaines.",
