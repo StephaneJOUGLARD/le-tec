@@ -32,3 +32,8 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript image/sv
 </IfModule>
 AddType font/woff2 .woff2
 AddType application/rss+xml .xml
+
+# Fichiers internes du dépôt : jamais servis
+<FilesMatch "\.(md|py)$">
+  Require all denied
+</FilesMatch>
