@@ -403,7 +403,7 @@ llms = f"""# TEC — Pilotage & Ingénierie (le-tec.fr)
 - Directeur général : Benjamin Camerino. Responsable technique : David Durigon. Cheffe de projet conception : Sandra Olandese.
 - Adresse : Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble. Téléphone : {PHONE}. E-mail : {EMAIL}.
 - SAS au capital de 5 000 €, RCS Grenoble 941 810 749, créée en mars 2025.
-- Références : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), MTI à Claix (bâtiment industriel réaménagé en site occupé pour CGBI, livré en 2026), Soliha à Eybens (bureaux, pour CGBI), Soliha à Meylan (réhabilitation en logement social).
+- Références : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), MTI à Claix (bâtiment industriel réaménagé en site occupé pour CGBI, livré en 2026), Soliha à Eybens (bureaux, pour CGBI), Soliha à Meylan (réhabilitation en logement social, pour CGBI).
 
 ## Métiers
 """ + "\n".join(f"- [{t}]({SITE}/{h}): {d}" for h, ic, t, d in METIERS) + f"""

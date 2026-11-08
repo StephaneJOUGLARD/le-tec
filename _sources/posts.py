@@ -19,8 +19,8 @@ BLOG = [
 <p>Une référence de plus pour TEC en immobilier d'entreprise, où la tenue des délais se mesure aussi à la continuité de l'activité du client.</p>"""),
  dict(slug="soliha-meylan-rehabilitation-logement-social", date="2026-10-12", ref="soliha-meylan", cat="Soliha Meylan",
   title="Soliha à Meylan : un bâti vacant bientôt transformé en logement social",
-  desc="Réhabilitation d'un tènement vacant et de son cabanon en logement locatif social à Meylan : 11 lots, travaux programmés d'octobre 2026 à juin 2027.",
-  body="""<p>À Meylan, <strong>SOLIHA</strong> engage la réhabilitation d'un tènement immobilier vacant et de son cabanon pour créer un <strong>logement locatif social</strong>. TEC a établi le planning des travaux et coordonnera le chantier.</p>
+  desc="Pour CGBI, réhabilitation d'un tènement vacant et de son cabanon en logement locatif social à Meylan : 11 lots, travaux programmés d'octobre 2026 à juin 2027.",
+  body="""<p>À Meylan, <strong>SOLIHA</strong> engage la réhabilitation d'un tènement immobilier vacant et de son cabanon pour créer un <strong>logement locatif social</strong>. L'opération est réalisée par <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, pour le compte duquel TEC a établi le planning des travaux et coordonnera le chantier.</p>
 <h2>Onze lots, neuf mois</h2>
 <p>Démolition et maçonnerie, charpente-couverture-zinguerie, menuiseries extérieures et intérieures, plâtrerie-isolation, carrelage, électricité, plomberie-ventilation, chauffage avec contrat de maintenance, peintures et façades : le calendrier s'étend d'octobre 2026, avec la période de préparation, jusqu'à la réception prévue en juin 2027.</p>
 <h2>Réhabiliter, c'est composer avec l'existant</h2>
