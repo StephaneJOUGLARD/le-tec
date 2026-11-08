@@ -2,7 +2,7 @@
 import os, sys, json, datetime, re
 sys.path.insert(0, os.path.dirname(__file__))
 from common import *
-from refs import REFS, svg, visual
+from refs import REFS, svg, visual, photo
 from posts import BLOG, ACTU
 from metiers import SERVICES
 
@@ -25,7 +25,12 @@ def post_card(x, base, kind):
     cls = "" if kind == "blog" else (" jur" if x["cat"] == "jur" else (" tech" if x["cat"] == "tech" else ""))
     title = x["title"] if kind == "blog" else x["short"]
     dc = f' data-cat="{x["cat"]}"' if kind == "actu" else (f' data-cat="{x["ref"]}"' if kind == "blog" else "")
-    return f'''<a class="post reveal" href="{base}{x["slug"]}.html"{dc}><div class="meta"><span class="cat{cls}">{cat}</span><time datetime="{x["date"]}">{fdate(x["date"])}</time></div><h3>{title}</h3><p>{x["desc"]}</p><span class="link-arrow more">Lire</span></a>'''
+    th = ""
+    if kind == "blog" and photo(x["ref"]):
+        pre = base.split("blog/")[0] if base else "../"
+        u = f'{pre}assets/img/references/{x["ref"]}-800.webp'
+        th = f'<div class="post-thumb"><img src="{u}" alt="" loading="lazy" width="800" height="500"></div>'
+    return f'''<a class="post reveal{" has-thumb" if th else ""}" href="{base}{x["slug"]}.html"{dc}>{th}<div class="meta"><span class="cat{cls}">{cat}</span><time datetime="{x["date"]}">{fdate(x["date"])}</time></div><h3>{title}</h3><p>{x["desc"]}</p><span class="link-arrow more">Lire</span></a>'''
 
 BLOG.sort(key=lambda x: x["date"], reverse=True)
 ACTU.sort(key=lambda x: x["date"], reverse=True)
@@ -264,6 +269,10 @@ def article(kind, x, items):
     src = ""
     if x.get("sources"):
         src = '<div class="sources"><h2>Sources</h2><ol>' + "".join(f'<li><a href="{u}" rel="noopener" target="_blank">{t}</a></li>' for t, u in x["sources"]) + '</ol><p class="note">Article d\'information générale rédigé à partir des sources citées ; il ne constitue pas un conseil juridique. Vérifiez les textes applicables à votre opération.</p></div>'
+    fig = ""
+    if kind == "blog" and photo(x["ref"]):
+        rr = REF[x["ref"]]
+        fig = f'<figure class="art-fig">{visual(rr, "f", "{P}", eager=True)}<figcaption>{rr["name"]}, {rr["loc"].split(" · ")[0]} — perspective non contractuelle</figcaption></figure>'
     others = [y for y in items if y["slug"] != x["slug"]][:4]
     ol = "".join(f'<li><a href="{y["slug"]}.html">{y.get("short", y["title"])}</a></li>' for y in others)
     side_ref = ""
@@ -271,12 +280,12 @@ def article(kind, x, items):
         r = REF[x["ref"]]
         side_ref = f'<div class="box"><h4>{r["name"]}</h4><dl class="kv"><dt>Lieu</dt><dd>{r["loc"].split(" · ")[0]}</dd><dt>Programme</dt><dd>{r["typ"]}</dd><dt>Mission</dt><dd>{r["mission"]}</dd></dl><p class="mt-2"><a class="link-arrow" href="{{P}}references.html#{r["slug"]}">Fiche référence</a></p></div>'
     b += f'''<section class="section"><div class="wrap layout">
-<article class="prose">{x["body"]}{src}</article>
+<article class="prose">{fig}{x["body"]}{src}</article>
 <aside class="aside">{side_ref}
 <div class="box"><h4>À lire aussi</h4><ul>{ol}</ul></div>
 <div class="box box--ink"><h4>Besoin d'un pilote pour votre chantier ?</h4><p>Maîtrise d'œuvre d'exécution, OPC, économie : parlons de votre opération.</p><a class="btn btn--red" href="{{P}}contact.html">Nous consulter</a></div>
 </aside></div></section>'''
-    ld = [{"@context":"https://schema.org","@type":"BlogPosting" if kind=="blog" else "NewsArticle","headline":x["title"][:110],"description":x["desc"],"datePublished":x["date"],"dateModified":x["date"],"inLanguage":"fr-FR","mainEntityOfPage":SITE+"/"+path,"image":SITE+"/assets/img/og-tec.png","author":{"@type":"Organization","name":"TEC — Pilotage & Ingénierie","url":SITE+"/"},"publisher":{"@id":SITE+"/#organisation"},
+    ld = [{"@context":"https://schema.org","@type":"BlogPosting" if kind=="blog" else "NewsArticle","headline":x["title"][:110],"description":x["desc"],"datePublished":x["date"],"dateModified":x["date"],"inLanguage":"fr-FR","mainEntityOfPage":SITE+"/"+path,"image":(SITE+f"/assets/img/references/{x['ref']}.webp" if kind=="blog" and photo(x.get("ref","")) else SITE+"/assets/img/og-tec.png"),"author":{"@type":"Organization","name":"TEC — Pilotage & Ingénierie","url":SITE+"/"},"publisher":{"@id":SITE+"/#organisation"},
            **({"citation":[u for t,u in x["sources"]]} if x.get("sources") else {})}]
     pages.append(page(path, (x.get("short") or x["title"]) + " | TEC", x["desc"], b, current=kind if kind=="blog" else "actualites", ld=ld, og_type="article",
                       crumbs=[("Accueil",""),(sec, f"{folder}/index.html"),(x.get("short", x["title"]), path)]))

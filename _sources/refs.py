@@ -37,11 +37,14 @@ def _crane(x, top=70, base=340, jib=230):
 
 import os as _os
 PHOTOS = "/home/claude/tec/site/assets/img/references"
-def visual(r, k, p="{P}"):
-    for ext in ("webp", "jpg"):
-        f = f"{PHOTOS}/{r['slug']}.{ext}"
-        if _os.path.exists(f):
-            return f'<img src="{p}assets/img/references/{r["slug"]}.{ext}" alt="{r["name"]}, {r["loc"].split(" · ")[0]} — {r["typ"]}" loading="lazy" width="1200" height="750">'
+def photo(slug):
+    return _os.path.exists(f"{PHOTOS}/{slug}.webp")
+
+def visual(r, k, p="{P}", eager=False):
+    if photo(r["slug"]):
+        u = f'{p}assets/img/references/{r["slug"]}'
+        return (f'<img src="{u}-800.webp" srcset="{u}-800.webp 800w, {u}.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" '
+                f'alt="{r["name"]}, {r["loc"].split(" · ")[0]} — perspective" {"" if eager else 'loading="lazy" '}width="1600" height="1000">')
     return svg(r["kind"], k)
 
 def svg(kind, k="a", wip=True):

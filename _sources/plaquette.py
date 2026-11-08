@@ -2,7 +2,7 @@
 import os, sys, subprocess
 sys.path.insert(0, os.path.dirname(__file__))
 from common import icon, PHONE, EMAIL
-from refs import REFS, svg
+from refs import REFS, svg, photo
 
 S = "/home/claude/tec/site/assets"
 logo_b = open(S + "/img/logo-tec-blanc.svg").read()
@@ -148,7 +148,7 @@ p3 = f'''<section class="pg"><div class="pad">
 
 steps = [("01","Conception","Faisabilité, esquisses, APD, autorisations"),("02","Consultation","DCE, CCTP, analyse des offres, marchés"),("03","Préparation","Visas EXE, planning TCE, installation"),("04","Exécution","DET, OPC, réunions hebdomadaires"),("05","Réception","OPR, PV, levée des réserves, DOE"),("06","Après livraison","Parfait achèvement, garanties")]
 sh = "".join(f'<div class="st"><i>{n}</i><b>{t}</b>{d}</div>' for n,t,d in steps)
-rh = "".join(f'<div class="ref"><div class="v">{svg(R[s]["kind"], s[:3]+"p")}</div><div class="t"><em>{R[s]["loc"].split(" · ")[0].upper()}</em><b>{R[s]["name"]}</b>{R[s]["typ"]}<br>Mission : {R[s]["mission"].split(",")[0]}</div></div>' for s in ["element-embrun","jardins-de-babylone","horizon-belledonne"])
+rh = "".join(f'<div class="ref"><div class="v">{('<img src="file://'+S+'/img/references/'+s+'-800.webp" style="width:100%;height:100%;object-fit:cover">') if photo(s) else svg(R[s]["kind"], s[:3]+"p")}</div><div class="t"><em>{R[s]["loc"].split(" · ")[0].upper()}</em><b>{R[s]["name"]}</b>{R[s]["typ"]}<br>Mission : {R[s]["mission"].split(",")[0]}</div></div>' for s in ["element-embrun","jardins-de-babylone","horizon-belledonne"])
 p4 = f'''<section class="pg"><div class="pad">
 <div class="eb">Les étapes clés de votre projet, avec TEC</div>
 <div class="steps">{sh}</div>
