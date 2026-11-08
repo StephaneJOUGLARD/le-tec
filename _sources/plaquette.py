@@ -68,6 +68,10 @@ h1,h2,h3,h4{{font-family:Archivo;font-stretch:115%;margin:0;color:#121836;line-h
 .met ul{{margin:2mm 0 0;padding-left:4mm;font-size:8.2pt;color:#1a1f38}}
 .met li::marker{{color:#c42826}}
 .met.wide{{grid-column:span 2}}
+.soon-met{{background:#f1f1ee;border-style:dashed;opacity:.8}}
+.soon-met .ic{{background:#9aa0b8}}
+.soon-met h3,.soon-met p,.soon-met ul{{color:#7a8099}}
+.met h3 .soon{{display:inline-block;margin-left:2mm;font-size:6.6pt;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#5a6182;border:.3mm solid rgba(18,24,54,.2);border-radius:9mm;padding:.6mm 2.2mm;vertical-align:middle;background:#fff}}
 .eng{{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:6mm}}
 .eng div{{background:#121836;color:#c9cff0;border-radius:3mm;padding:4.5mm;font-size:8pt}}
 .eng b{{display:block;color:#fff;font-family:Archivo;font-stretch:112%;font-size:9.4pt;margin:2mm 0 1mm}}
@@ -115,7 +119,7 @@ p2 = f'''<section class="pg p2"><div class="pad">
 <div class="eb">Qui sommes-nous ?</div>
 <div class="two">
 <div><h2>Votre projet,<br>notre métier</h2>
-<p class="lead">TEC — Technique et Économie de la Construction — est un bureau d'études d'exécution et d'économie de la construction. Créée à Grenoble en 2025, notre équipe pilote des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
+<p class="lead">TEC — Technique et Économie de la Construction — est un bureau d'études de conception et de maîtrise d'œuvre d'exécution. Créée à Grenoble en 2025, notre équipe pilote des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
 <div class="quote">Un chantier réussi se prépare dès la conception et se gagne chaque semaine sur le terrain.</div>
 <p>Architectes, bureaux d'études structure et fluides, bureau de contrôle, coordonnateur SPS, géotechnicien, concessionnaires, services instructeurs et jusqu'à 22 entreprises de travaux : sur une opération, les intervenants sont nombreux. Notre rôle est de les faire travailler ensemble, dans le bon ordre, au bon prix et au bon moment.</p></div>
 <div>
@@ -132,15 +136,15 @@ mets = [("concept","Conception architecturale","En lien avec l'architecte et les
         ("moe","Maîtrise d'œuvre d'exécution","De la consultation à la réception des ouvrages.",["DCE, CCTP, analyse des offres (ACT)","Visa des plans d'exécution","Direction de l'exécution (DET), AOR, DOE"]),
         ("suivi","Suivi de chantier","Présence terrain chaque semaine.",["Réunion hebdomadaire et compte rendu","Contrôle qualité, essais, situations","Sécurité, propreté, intempéries"]),
         ("opc","OPC","Ordonnancement, pilotage, coordination.",["Planning tous corps d'état","Interfaces entre lots, moyens communs","Concessionnaires, OPR et livraisons"]),
-        ("eco","Économie de la construction & AMO","Maîtriser le coût, de l'esquisse au décompte.",["Estimations, métrés, CCTP","Consultation et négociation","Suivi budgétaire, avenants, DGD"])]
-mh = "".join(f'<div class="met{" wide" if i==4 else ""}"><div class="ic">{icon(ic)}</div><div><h3>{t}</h3><p>{d}</p><ul>{"".join(f"<li>{x}</li>" for x in l)}</ul></div></div>' for i,(ic,t,d,l) in enumerate(mets))
+        ("eco","Économie de la construction & AMO <span class=\"soon\">Prochainement</span>","Maîtriser le coût, de l'esquisse au décompte.",["Estimations, métrés, CCTP","Consultation et négociation","Suivi budgétaire, avenants, DGD"])]
+mh = "".join(f'<div class="met{" wide soon-met" if i==4 else ""}"><div class="ic">{icon(ic)}</div><div><h3>{t}</h3><p>{d}</p><ul>{"".join(f"<li>{x}</li>" for x in l)}</ul></div></div>' for i,(ic,t,d,l) in enumerate(mets))
 engs = [("clock","Planning contractuel","Calendrier détaillé intégré aux marchés et mis à jour chaque semaine."),("doc","Comptes rendus hebdomadaires","Actions datées, avancement par lot, photos ; diffusés sous 48 h."),
         ("shield","Visa & contrôle qualité","Plans EXE visés en lien avec le bureau de contrôle, essais, autocontrôles."),("euro","Situations validées","Avancement contrôlé chaque mois avant facturation des entreprises."),
         ("users","Sous-traitance maîtrisée","Instruction des demandes d'agrément et des pièces obligatoires."),("eye","Réception & garanties","OPR, procès-verbaux, levée des réserves, DOE, parfait achèvement.")]
 eh = "".join(f'<div>{icon(i)}<b>{t}</b>{d}</div>' for i,t,d in engs)
 p3 = f'''<section class="pg"><div class="pad">
 <div class="eb">Nos métiers</div><h2 style="font-size:25pt;font-weight:800;margin-bottom:3mm">Une ingénierie de chantier complète</h2>
-<p class="lead" style="margin:0 0 6mm;max-width:150mm">Cinq expertises complémentaires, mobilisables à la carte ou en mission complète, en neuf comme en réhabilitation.</p>
+<p class="lead" style="margin:0 0 6mm;max-width:150mm">Quatre expertises complémentaires, et bientôt une cinquième, mobilisables à la carte ou en mission complète, en neuf comme en réhabilitation.</p>
 <div class="mets">{mh}</div>
 <div class="eb" style="margin-top:8mm">Nos engagements</div>
 <div class="eng">{eh}</div>

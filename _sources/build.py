@@ -53,9 +53,9 @@ home = f'''
   <div>
    <span class="eyebrow">Conception et maîtrise d'œuvre d'exécution · Alpes</span>
    <h1>Vos chantiers, pilotés du plan à la <em>réception</em></h1>
-   <p class="lead">TEC assure la maîtrise d'œuvre d'exécution, l'OPC et l'économie de la construction de vos opérations de logements et d'immobilier d'entreprise, en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
+   <p class="lead">TEC assure la conception, la maîtrise d'œuvre d'exécution et l'OPC de vos opérations de logements et d'immobilier d'entreprise, en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
    <div class="hero-actions"><a class="btn btn--red" href="{{P}}contact.html">Confier une mission {icon("arrow")}</a><a class="btn btn--ghost-l" href="{{P}}references.html">Voir nos chantiers</a></div>
-   <div class="hero-meta"><span>Maîtrise d'œuvre d'exécution</span><span>OPC</span><span>Suivi de chantier</span><span>Économie de la construction</span></div>
+   <div class="hero-meta"><span>Maîtrise d'œuvre d'exécution</span><span>OPC</span><span>Suivi de chantier</span><span class="soon">Économie de la construction · prochainement</span></div>
   </div>
   <div class="gantt" aria-hidden="true">
    <div class="gantt-top"><div><b>Planning TCE — Résidence R+3</b><br><small>Mise à jour hebdomadaire · CR n°63</small></div><span class="pill">Chantier en cours</span></div>
@@ -102,8 +102,8 @@ home = f'''
 </div></section>
 
 <section class="section section--white"><div class="wrap split">
- <div class="reveal"><span class="eyebrow">Pourquoi TEC</span><h2>La rigueur d'un pilote, l'œil d'un économiste</h2>
- <p class="lead">TEC est un bureau d'études spécialisé dans l'exécution et l'économie de la construction. Nous ne concevons pas des chantiers sur le papier : nous les faisons aboutir, au prix et au délai convenus, aux côtés du maître d'ouvrage.</p>
+ <div class="reveal"><span class="eyebrow">Pourquoi TEC</span><h2>La rigueur d'un pilote, la maîtrise des coûts</h2>
+ <p class="lead">TEC est un bureau d'études spécialisé dans la conception et l'exécution des opérations de construction. Nous ne concevons pas des chantiers sur le papier : nous les faisons aboutir, au prix et au délai convenus, aux côtés du maître d'ouvrage.</p>
  <ul class="checks"><li>Une présence terrain hebdomadaire et des comptes rendus qui engagent.</li><li>Un planning tous corps d'état vivant, mis à jour chaque semaine.</li><li>Un contrôle financier rigoureux des situations et des avenants.</li><li>Une connaissance fine des entreprises et des contraintes de montagne.</li></ul>
  <p class="mt-2"><a class="btn btn--navy" href="{{P}}agence.html">Découvrir l'agence {icon("arrow")}</a></p></div>
  <div class="engage reveal">
@@ -132,25 +132,25 @@ home = f'''
 {cta_band()}
 '''
 pages.append(page("index.html", "TEC — Maîtrise d'œuvre d'exécution et OPC à Grenoble",
-  "Bureau d'ingénierie de chantier à Grenoble : maîtrise d'œuvre d'exécution, OPC, suivi de chantier, économie de la construction. Isère, Savoie, Hautes-Alpes.",
+  "Bureau d'ingénierie de chantier à Grenoble : conception, maîtrise d'œuvre d'exécution, OPC, suivi de chantier. Isère, Savoie, Hautes-Alpes.",
   home, ld=[{"@context":"https://schema.org","@type":"WebSite","@id":SITE+"/#site","url":SITE+"/","name":"TEC — Pilotage & Ingénierie","inLanguage":"fr-FR","publisher":{"@id":SITE+"/#organisation"}}]))
 
 # ======================= MÉTIERS (hub) =======================
 hub = page_hero([("Accueil","index.html"),("Nos métiers","nos-metiers.html")], "Nos métiers", "Une ingénierie de chantier complète",
-  "Conception, maîtrise d'œuvre d'exécution, suivi de chantier, OPC et économie de la construction : cinq expertises complémentaires portées par une même équipe.")
+  "Conception, maîtrise d'œuvre d'exécution, suivi de chantier et OPC : quatre expertises complémentaires portées par une même équipe, et prochainement l'économie de la construction.")
 hub += f'''<section class="section"><div class="wrap"><div class="grid-5">{met_cards}</div></div></section>
 <section class="section section--white"><div class="wrap split split--top">
 <div><span class="eyebrow">Missions à la carte ou complètes</span><h2>Une mission adaptée à chaque maître d'ouvrage</h2></div>
-<div class="prose"><p>Promoteurs, bailleurs, collectivités, entreprises : nos missions se combinent selon votre organisation. Vous disposez d'un architecte et d'une équipe de conception ? Nous assurons la maîtrise d'œuvre d'exécution et l'OPC. Vous démarrez un projet ? Nous vous accompagnons dès la faisabilité, en assistance à maîtrise d'ouvrage.</p>
+<div class="prose"><p>Promoteurs, bailleurs, collectivités, entreprises : nos missions se combinent selon votre organisation. Vous disposez d'un architecte et d'une équipe de conception ? Nous assurons la maîtrise d'œuvre d'exécution et l'OPC. Vous démarrez un projet ? Nous vous accompagnons dès la faisabilité et la conception.</p>
 <table><thead><tr><th>Votre besoin</th><th>Notre mission</th></tr></thead><tbody>
-<tr><td>Étudier un terrain, chiffrer un programme</td><td>Faisabilité, AMO, estimation</td></tr>
+<tr><td>Étudier un terrain, chiffrer un programme</td><td>Faisabilité, conception (économie et AMO : prochainement)</td></tr>
 <tr><td>Consulter les entreprises</td><td>DCE, CCTP, analyse des offres (ACT)</td></tr>
 <tr><td>Diriger les travaux</td><td>Maîtrise d'œuvre d'exécution (VISA, DET)</td></tr>
 <tr><td>Tenir les délais en lots séparés</td><td>OPC</td></tr>
 <tr><td>Réceptionner et livrer</td><td>AOR, levée des réserves, DOE</td></tr></tbody></table></div>
 </div></section>{cta_band()}'''
 pages.append(page("nos-metiers.html", "Nos métiers : MOE d'exécution, OPC, suivi de chantier | TEC",
-  "Conception, maîtrise d'œuvre d'exécution, suivi de chantier, OPC et économie de la construction : les métiers de TEC pour vos opérations alpines.",
+  "Conception, maîtrise d'œuvre d'exécution, suivi de chantier et OPC : les métiers de TEC pour vos opérations alpines. Économie de la construction : prochainement.",
   hub, crumbs=[("Accueil",""),("Nos métiers","nos-metiers.html")]))
 
 # ======================= PAGES SERVICES =======================
@@ -214,7 +214,7 @@ team = [("BC","Benjamin Camerino","Directeur général","Associé fondateur de T
         ("SO","Sandra Olandese","Cheffe de projet conception","Elle pilote les études de conception : faisabilité, plans, dossiers d'autorisation et coordination avec les architectes et bureaux d'études.")]
 th = "".join(f'<article class="member reveal"><div class="avatar" aria-hidden="true">{i}</div><span class="role">{r}</span><h3>{n}</h3><p>{d}</p></article>' for i, n, r, d in team)
 b = page_hero([("Accueil","index.html"),("L'agence","agence.html")], "L'agence", "Technique et Économie de la Construction",
-  "TEC est un bureau d'études d'exécution et d'économie de la construction : une équipe resserrée, basée à Grenoble, qui pilote des opérations de logements et d'immobilier d'entreprise dans tout l'arc alpin.")
+  "TEC est un bureau d'études de conception et de maîtrise d'œuvre d'exécution : une équipe resserrée, basée à Grenoble, qui pilote des opérations de logements et d'immobilier d'entreprise dans tout l'arc alpin.")
 b += f'''<section class="section"><div class="wrap split split--top">
 <div class="reveal"><span class="eyebrow">Notre histoire</span><h2>Née du terrain, en 2025</h2></div>
 <div class="prose reveal"><p>TEC — Technique et Économie de la Construction — a été créée à Grenoble en mars 2025 par des professionnels de la promotion et de la construction, autour de <strong>Benjamin Camerino</strong>. Son ambition : offrir aux maîtres d'ouvrage un interlocuteur unique pour l'exécution, le pilotage et l'économie de leurs chantiers.</p>
@@ -235,7 +235,7 @@ b += f'''<section class="section"><div class="wrap split split--top">
 <p><a class="btn btn--navy" href="mailto:{EMAIL}?subject=Candidature%20spontan%C3%A9e">{icon("mail")}Candidature spontanée</a></p></div>
 </div></section>{cta_band()}'''
 pages.append(page("agence.html", "L'agence TEC à Grenoble : équipe, histoire, valeurs",
-  "TEC, bureau d'études d'exécution et d'économie de la construction à Grenoble. L'équipe : Benjamin Camerino, David Durigon, Sandra Olandese.",
+  "TEC, bureau d'études de conception et de maîtrise d'œuvre d'exécution à Grenoble. L'équipe : Benjamin Camerino, David Durigon, Sandra Olandese.",
   b, current="agence.html", crumbs=[("Accueil",""),("L'agence","agence.html")]))
 
 # ======================= BLOG & ACTUALITÉS =======================
@@ -289,7 +289,7 @@ def article(kind, x, items):
 <article class="prose">{fig}{x["body"]}{src}</article>
 <aside class="aside">{side_ref}
 <div class="box"><h4>À lire aussi</h4><ul>{ol}</ul></div>
-<div class="box box--ink"><h4>Besoin d'un pilote pour votre chantier ?</h4><p>Maîtrise d'œuvre d'exécution, OPC, économie : parlons de votre opération.</p><a class="btn btn--red" href="{{P}}contact.html">Nous consulter</a></div>
+<div class="box box--ink"><h4>Besoin d'un pilote pour votre chantier ?</h4><p>Conception, maîtrise d'œuvre d'exécution, OPC : parlons de votre opération.</p><a class="btn btn--red" href="{{P}}contact.html">Nous consulter</a></div>
 </aside></div></section>'''
     ld = [{"@context":"https://schema.org","@type":"BlogPosting" if kind=="blog" else "NewsArticle","headline":x["title"][:110],"description":x["desc"],"datePublished":x["date"],"dateModified":x["date"],"inLanguage":"fr-FR","mainEntityOfPage":SITE+"/"+path,"image":(SITE+f"/assets/img/blog/{x['img']}.webp" if x.get("img") else SITE+f"/assets/img/references/{x['ref']}.webp" if kind=="blog" and photo(x.get("ref","")) else SITE+"/assets/img/og-tec.png"),"author":{"@type":"Organization","name":"TEC — Pilotage & Ingénierie","url":SITE+"/"},"publisher":{"@id":SITE+"/#organisation"},
            **({"citation":[u for t,u in x["sources"]]} if x.get("sources") else {})}]
@@ -300,7 +300,7 @@ for x in ACTU: article("actu", x, ACTU)
 
 # ======================= CONTACT =======================
 b = page_hero([("Accueil","index.html"),("Contact","contact.html")], "Contact", "Parlons de votre opération",
-  "Une mission de maîtrise d'œuvre d'exécution, d'OPC, d'économie de la construction ou d'accompagnement à la conception ? Décrivez-nous votre projet.")
+  "Une mission de conception, de maîtrise d'œuvre d'exécution, d'OPC ou de suivi de chantier ? Décrivez-nous votre projet.")
 b += f'''<section class="section"><div class="wrap contact-grid">
 <div><h2>Nos coordonnées</h2><p class="lead">Nous vous répondons sous 48 heures ouvrées.</p>
 <div class="coords">
@@ -316,14 +316,14 @@ b += f'''<section class="section"><div class="wrap contact-grid">
 <div class="row"><label>Nom et prénom *<input name="nom" required autocomplete="name"></label><label>Société / organisme<input name="societe" autocomplete="organization"></label></div>
 <div class="row"><label>E-mail *<input type="email" name="email" required autocomplete="email"></label><label>Téléphone<input type="tel" name="tel" autocomplete="tel"></label></div>
 <div class="row"><label>Vous êtes<select name="profil"><option>Promoteur / maître d'ouvrage privé</option><option>Collectivité / maître d'ouvrage public</option><option>Bailleur social</option><option>Entreprise (immobilier d'entreprise)</option><option>Architecte / bureau d'études</option><option>Entreprise de travaux</option><option>Autre</option></select></label>
-<label>Mission envisagée<select name="mission"><option>Maîtrise d'œuvre d'exécution</option><option>OPC</option><option>Suivi de chantier</option><option>Économie de la construction / AMO</option><option>Conception</option><option>Mission complète</option><option>Autre / je ne sais pas</option></select></label></div>
+<label>Mission envisagée<select name="mission"><option>Maîtrise d'œuvre d'exécution</option><option>OPC</option><option>Suivi de chantier</option><option>Économie de la construction / AMO (prochainement)</option><option>Conception</option><option>Mission complète</option><option>Autre / je ne sais pas</option></select></label></div>
 <label>Votre projet *<textarea name="message" required placeholder="Localisation, nature de l'opération, surface ou nombre de logements, calendrier…"></textarea></label>
 <label class="hp" aria-hidden="true">Ne pas remplir<input name="site_web" tabindex="-1" autocomplete="off"></label>
 <label class="consent"><input type="checkbox" name="rgpd" required><span>J'accepte que mes données soient utilisées par TEC pour traiter ma demande, conformément à la <a href="{{P}}confidentialite.html">politique de confidentialité</a>.</span></label>
 <div><button class="btn btn--red" type="submit">Envoyer ma demande {icon("arrow")}</button></div>
 </form>
 </div></section>'''
-pages.append(page("contact.html", "Contact — TEC Pilotage & Ingénierie, Grenoble", "Contactez TEC pour une mission de maîtrise d'œuvre d'exécution, d'OPC, de suivi de chantier ou d'économie de la construction. Immeuble Équinoxe, Grenoble.",
+pages.append(page("contact.html", "Contact — TEC Pilotage & Ingénierie, Grenoble", "Contactez TEC pour une mission de conception, de maîtrise d'œuvre d'exécution, d'OPC ou de suivi de chantier. Immeuble Équinoxe, Grenoble.",
   b, current="contact.html", crumbs=[("Accueil",""),("Contact","contact.html")],
   ld=[{"@context":"https://schema.org","@type":"ContactPage","url":SITE+"/contact.html","about":{"@id":SITE+"/#organisation"}}]))
 
@@ -404,7 +404,7 @@ open(OUT+"/feed.xml","w").write("\n".join(rss))
 # llms.txt : résumé pour les moteurs de réponse IA
 llms = f"""# TEC — Pilotage & Ingénierie (le-tec.fr)
 
-> TEC (Technique et Économie de la Construction) est un bureau d'ingénierie de chantier basé à Grenoble (38). TEC assure la maîtrise d'œuvre d'exécution (MOEX : DCE, ACT, VISA, DET, AOR), l'OPC (ordonnancement, pilotage, coordination), le suivi de chantier, l'économie de la construction, l'assistance à maîtrise d'ouvrage et l'accompagnement à la conception architecturale, pour des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.
+> TEC (Technique et Économie de la Construction) est un bureau d'ingénierie de chantier basé à Grenoble (38). TEC assure la maîtrise d'œuvre d'exécution (MOEX : DCE, ACT, VISA, DET, AOR), l'OPC (ordonnancement, pilotage, coordination), le suivi de chantier et l'accompagnement à la conception architecturale (l'économie de la construction et l'AMO seront proposées prochainement), pour des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.
 
 - Directeur général : Benjamin Camerino. Responsable technique : David Durigon. Cheffe de projet conception : Sandra Olandese.
 - Adresse : Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble. Téléphone : {PHONE}. E-mail : {EMAIL}.

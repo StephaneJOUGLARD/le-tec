@@ -11,7 +11,7 @@ PHONE = "06 62 37 27 90"; PHONE_INTL = "+33662372790"
 EMAIL = "contact@le-tec.fr"
 PDF = "assets/docs/plaquette-TEC-pilotage-ingenierie.pdf"
 OUT = "/home/claude/tec/site"
-ASSET_V = "20261108c"  # à incrémenter à chaque modification du CSS ou du JS (vide le cache des navigateurs)
+ASSET_V = "20261108d"  # à incrémenter à chaque modification du CSS ou du JS (vide le cache des navigateurs)
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -82,8 +82,8 @@ def footer(p):
   <div class="f-top">
    <div>
     <img src="{p}assets/img/logo-tec-blanc.svg" alt="TEC — Pilotage &amp; Ingénierie" width="92" height="58" loading="lazy">
-    <p>Maîtrise d'œuvre d'exécution, OPC, suivi de chantier et économie de la construction pour les maîtres d'ouvrage publics et privés des Alpes.</p>
-    <p class="group-line">Bureau d'études d'exécution et d'économie de la construction · Grenoble</p>
+    <p>Conception, maîtrise d'œuvre d'exécution, OPC et suivi de chantier pour les maîtres d'ouvrage publics et privés des Alpes. Économie de la construction : prochainement.</p>
+    <p class="group-line">Conception et maîtrise d'œuvre d'exécution · Grenoble</p>
    </div>
    <div><h4>Métiers</h4><ul>{met}</ul></div>
    <div><h4>Explorer</h4><ul>
@@ -113,7 +113,7 @@ ORG_LD = {
  "name": "TEC — Pilotage & Ingénierie", "legalName": "Technique et Économie de la Construction",
  "alternateName": ["TEC", "T.E.C"], "url": SITE + "/", "logo": SITE + "/assets/img/logo-tec.svg",
  "image": SITE + "/assets/img/og-tec.png", "email": EMAIL, "telephone": PHONE_INTL,
- "description": "Bureau d'ingénierie de chantier : maîtrise d'œuvre d'exécution, OPC (ordonnancement, pilotage, coordination), suivi de chantier, économie de la construction et assistance à la conception architecturale en Isère, Savoie, Haute-Savoie et Hautes-Alpes.",
+ "description": "Bureau d'ingénierie de chantier : maîtrise d'œuvre d'exécution, OPC (ordonnancement, pilotage, coordination), suivi de chantier et assistance à la conception architecturale en Isère, Savoie, Haute-Savoie et Hautes-Alpes.",
  "address": {"@type": "PostalAddress", "streetAddress": "Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle", "postalCode": "38100", "addressLocality": "Grenoble", "addressRegion": "Auvergne-Rhône-Alpes", "addressCountry": "FR"},
  "geo": {"@type": "GeoCoordinates", "latitude": 45.1696, "longitude": 5.7166},
  "areaServed": [{"@type": "AdministrativeArea", "name": n} for n in ["Isère", "Savoie", "Haute-Savoie", "Hautes-Alpes", "Auvergne-Rhône-Alpes", "Provence-Alpes-Côte d'Azur"]],
