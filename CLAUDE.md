@@ -30,6 +30,7 @@ La plaquette PDF (`plaquette.py`) n'est à régénérer que si son contenu chang
 - `posts.py` → `BLOG` (articles chantiers) et `ACTU` (actualités juridiques et techniques).
 - Format d'une entrée `ACTU` : `slug`, `date` (ISO), `cat` (`jur` ou `tech`), `catl` (« Juridique » / « Technique »), `title`, `short` (titre court), `desc` (≈150 caractères, sert de meta description), `body` (HTML : `<p>`, `<h2>`, `<ul>`, `<div class="callout"><h4>…</h4><p>…</p></div>`), `sources` (liste de tuples `("Libellé — média, date", "URL")`).
 - Chaque actualité se termine par ce que cela change pour un maître d'ouvrage ou un chantier (angle TEC : maîtrise d'œuvre d'exécution, OPC, économie de la construction).
+- Après toute modification de `assets/css/style.css` ou `assets/js/main.js`, incrémenter `ASSET_V` dans `_sources/common.py`, sinon les mobiles gardent l'ancienne version en cache.
 - Mettre à jour `today = "AAAA-MM-JJ"` dans `build.py` (lastmod du sitemap) à chaque mise à jour.
 - Sources officielles en priorité (Légifrance, ministères, ADEME, CSTB, FFB, Cerema, EUR-Lex) ; vérifier dates, numéros de textes et chiffres ; rédaction originale, jamais recopiée ; aucun chiffre sans source.
 
