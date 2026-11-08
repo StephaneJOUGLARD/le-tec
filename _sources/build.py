@@ -50,7 +50,7 @@ home = f'''
 <section class="hero"><div class="wrap">
  <div class="hero-grid">
   <div>
-   <span class="eyebrow">Bureau d'études d'exécution &amp; d'économie · Alpes</span>
+   <span class="eyebrow">Maître d'œuvre d'exécution et OPC · Alpes</span>
    <h1>Vos chantiers, pilotés du plan à la <em>réception</em></h1>
    <p class="lead">TEC assure la maîtrise d'œuvre d'exécution, l'OPC et l'économie de la construction de vos opérations de logements et d'immobilier d'entreprise, en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
    <div class="hero-actions"><a class="btn btn--red" href="{{P}}contact.html">Confier une mission {icon("arrow")}</a><a class="btn btn--ghost-l" href="{{P}}references.html">Voir nos chantiers</a></div>
