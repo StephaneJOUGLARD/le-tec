@@ -1,11 +1,11 @@
 # TEC — Pilotage & Ingénierie (le-tec.fr)
 
-> TEC (Technique et Économie de la Construction) est un bureau d'ingénierie de chantier basé à Grenoble (38), filiale du Groupe Novélia. TEC assure la maîtrise d'œuvre d'exécution (MOEX : DCE, ACT, VISA, DET, AOR), l'OPC (ordonnancement, pilotage, coordination), le suivi de chantier, l'économie de la construction, l'assistance à maîtrise d'ouvrage et l'accompagnement à la conception architecturale, pour des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.
+> TEC (Technique et Économie de la Construction) est un bureau d'ingénierie de chantier basé à Grenoble (38). TEC assure la maîtrise d'œuvre d'exécution (MOEX : DCE, ACT, VISA, DET, AOR), l'OPC (ordonnancement, pilotage, coordination), le suivi de chantier, l'économie de la construction, l'assistance à maîtrise d'ouvrage et l'accompagnement à la conception architecturale, pour des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.
 
 - Directeur général : Benjamin Camerino. Responsable technique : David Durigon. Cheffe de projet conception : Sandra Olandese.
-- Adresse : Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble. Téléphone : 04 76 42 64 91. E-mail : contact@le-tec.fr.
+- Adresse : Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble. Téléphone : 06 62 37 27 90. E-mail : contact@le-tec.fr.
 - SAS au capital de 5 000 €, RCS Grenoble 941 810 749, créée en mars 2025.
-- Chantiers en cours : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), chantiers CGBI pour MTI (Claix) et Soliha (Eybens).
+- Références : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), MTI à Claix (bâtiment industriel réaménagé en site occupé pour CGBI, livré en 2026), Soliha à Eybens (bureaux, pour CGBI), Soliha à Meylan (réhabilitation en logement social).
 
 ## Métiers
 - [Conception architecturale](https://le-tec.fr/conception-architecturale.html): Faisabilité, esquisses, plans et dossiers d'autorisation, en lien avec l'architecte.

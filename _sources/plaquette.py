@@ -115,7 +115,7 @@ p2 = f'''<section class="pg p2"><div class="pad">
 <div class="eb">Qui sommes-nous ?</div>
 <div class="two">
 <div><h2>Votre projet,<br>notre métier</h2>
-<p class="lead">TEC — Technique et Économie de la Construction — est le bureau d'ingénierie de chantier du Groupe Novélia. Créée en 2025, notre équipe pilote des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
+<p class="lead">TEC — Technique et Économie de la Construction — est un bureau d'études d'exécution et d'économie de la construction. Créée à Grenoble en 2025, notre équipe pilote des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
 <div class="quote">Un chantier réussi se prépare dès la conception et se gagne chaque semaine sur le terrain.</div>
 <p>Architectes, bureaux d'études structure et fluides, bureau de contrôle, coordonnateur SPS, géotechnicien, concessionnaires, services instructeurs et jusqu'à 22 entreprises de travaux : sur une opération, les intervenants sont nombreux. Notre rôle est de les faire travailler ensemble, dans le bon ordre, au bon prix et au bon moment.</p></div>
 <div>
@@ -124,8 +124,8 @@ p2 = f'''<section class="pg p2"><div class="pad">
 <div class="box" style="margin-top:4mm"><h3>Interlocuteur unique</h3><p>Choisir TEC, c'est vous concentrer sur l'essentiel : votre programme et vos acquéreurs ou utilisateurs. Nous vous informons chaque semaine de l'avancement réel et vous alertons avant que les écarts ne deviennent des retards.</p></div>
 </div></div>
 <div class="band"><div><b>96</b><span>logements en cours de pilotage d'exécution</span></div><div><b>90<sup>+</sup></b><span>réunions et comptes rendus de chantier depuis 2025</span></div><div><b>22</b><span>lots séparés coordonnés sur une même opération</span></div><div><b>4</b><span>départements alpins : Isère, Savoie, Haute-Savoie, Hautes-Alpes</span></div></div>
-<div class="eb" style="margin-top:6mm">Le Groupe Novélia</div>
-<div class="who"><div><b>Novélia Résidences</b>Promotion immobilière</div><div><b>Novélia Aménagement</b>Aménagement foncier</div><div><b>CGBI</b>Contractant général, immobilier d'entreprise</div><div><b>ALBEDIA</b>Cool roofing</div></div>
+<div class="eb" style="margin-top:6mm">Nos typologies</div>
+<div class="who"><div><b>Logements collectifs</b>Accession libre et sociale</div><div><b>Programmes mixtes</b>Collectif et individuel</div><div><b>Industrie &amp; tertiaire</b>Y compris en site occupé</div><div><b>Réhabilitation</b>Bâtis existants</div></div>
 </div>{foot(2)}</section>'''
 
 mets = [("concept","Conception architecturale","En lien avec l'architecte et les bureaux d'études.",["Faisabilité, capacité, esquisses","APS / APD, estimation par phase","Dossiers de permis de construire et d'aménager"]),
@@ -154,14 +154,14 @@ p4 = f'''<section class="pg"><div class="pad">
 <div class="steps">{sh}</div>
 <div class="eb">Références — chantiers en cours</div>
 <div class="refs">{rh}</div>
-<p class="others"><b>Immobilier d'entreprise avec CGBI :</b> MTI à Claix (rénovation lourde de locaux industriels en site occupé) · Soliha à Eybens (aménagement de plateaux de bureaux).</p>
+<p class="others"><b>Industrie et tertiaire, pour CGBI :</b> MTI à Claix (bâtiment industriel réaménagé en site occupé en 7 mois, livré en 2026) · Soliha à Eybens (plateaux de bureaux). <b>Réhabilitation :</b> Soliha à Meylan (logement locatif social, 2026-2027).</p>
 <div class="eb" style="margin-top:7mm">Pourquoi nous confier votre chantier</div>
 <div class="why"><div><b>Continuité</b>L'équipe qui prépare la consultation est celle qui pilote et réceptionne.</div><div><b>Présence terrain</b>Une réunion de chantier chaque semaine, des comptes rendus qui engagent.</div><div><b>Maîtrise des coûts</b>Situations validées chaque mois, travaux modificatifs chiffrés avant exécution.</div><div><b>Ancrage alpin</b>Métropole grenobloise, Grésivaudan, Maurienne, Chablais, Champsaur, Embrunais.</div></div>
 </div>
 <div class="contact">
 <div><div class="logo">{logo_b}</div><h2>Parlons de votre opération</h2><div class="co"><b>Immeuble Équinoxe</b><br>163 cours de la Libération et du Général de Gaulle<br>38100 Grenoble<br><b>{PHONE}</b> · {EMAIL}<br><b>le-tec.fr</b></div></div>
 <div><div class="eb">L'équipe</div><div class="team"><div><b>Benjamin Camerino</b> — Directeur général</div><div><b>David Durigon</b> — Responsable technique</div><div><b>Sandra Olandese</b> — Cheffe de projet conception</div></div>
-<p style="font-size:7.4pt;color:#7f88ba;margin-top:6mm">TEC — Technique et Économie de la Construction, SAS au capital de 5 000 € · RCS Grenoble 941 810 749 · Une société du Groupe Novélia. Illustrations schématiques non contractuelles.</p></div>
+<p style="font-size:7.4pt;color:#7f88ba;margin-top:6mm">TEC — Technique et Économie de la Construction, SAS au capital de 5 000 € · RCS Grenoble 941 810 749 · Illustrations schématiques non contractuelles.</p></div>
 </div></section>'''
 
 html = f'<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Plaquette TEC — Pilotage & Ingénierie</title><style>{css}</style></head><body>{p1}{p2}{p3}{p4}</body></html>'

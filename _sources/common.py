@@ -7,7 +7,7 @@ NAME = "TEC — Pilotage & Ingénierie"
 LEGAL = "Technique et Économie de la Construction (TEC)"
 ADDR = {"street": "163 cours de la Libération et du Général de Gaulle", "bldg": "Immeuble Équinoxe",
         "zip": "38100", "city": "Grenoble"}
-PHONE = "04 76 42 64 91"; PHONE_INTL = "+33476426491"
+PHONE = "06 62 37 27 90"; PHONE_INTL = "+33662372790"
 EMAIL = "contact@le-tec.fr"
 PDF = "assets/docs/plaquette-TEC-pilotage-ingenierie.pdf"
 OUT = "/home/claude/tec/site"
@@ -78,7 +78,7 @@ def footer(p):
    <div>
     <img src="{p}assets/img/logo-tec-blanc.svg" alt="TEC — Pilotage &amp; Ingénierie" width="92" height="58" loading="lazy">
     <p>Maîtrise d'œuvre d'exécution, OPC, suivi de chantier et économie de la construction pour les maîtres d'ouvrage publics et privés des Alpes.</p>
-    <p class="group-line">Une société du <a href="https://novelia-residences.fr" rel="noopener">Groupe Novélia</a>, aux côtés de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a> et <a href="https://albedia.eu" rel="noopener">ALBEDIA</a>.</p>
+    <p class="group-line">Bureau d'études d'exécution et d'économie de la construction · Grenoble</p>
    </div>
    <div><h4>Métiers</h4><ul>{met}</ul></div>
    <div><h4>Explorer</h4><ul>
@@ -113,8 +113,7 @@ ORG_LD = {
  "geo": {"@type": "GeoCoordinates", "latitude": 45.1696, "longitude": 5.7166},
  "areaServed": [{"@type": "AdministrativeArea", "name": n} for n in ["Isère", "Savoie", "Haute-Savoie", "Hautes-Alpes", "Auvergne-Rhône-Alpes", "Provence-Alpes-Côte d'Azur"]],
  "knowsAbout": ["Maîtrise d'œuvre d'exécution", "MOEX", "Direction de l'exécution des travaux (DET)", "Ordonnancement pilotage coordination (OPC)", "Suivi de chantier", "Économie de la construction", "Assistance à maîtrise d'ouvrage", "Conception architecturale", "RE2020", "Réception des travaux (AOR)"],
- "founder": {"@type": "Organization", "name": "Groupe Novélia"},
- "parentOrganization": {"@type": "Organization", "name": "Groupe Novélia", "url": "https://novelia-residences.fr"},
+ "foundingDate": "2025-03-24",
  "employee": [
    {"@type": "Person", "name": "Benjamin Camerino", "jobTitle": "Directeur général"},
    {"@type": "Person", "name": "David Durigon", "jobTitle": "Responsable technique"},

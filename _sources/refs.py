@@ -35,6 +35,15 @@ def _crane(x, top=70, base=340, jib=230):
             f'<line x1="{x+jib*0.7}" y1="{top+10}" x2="{x+jib*0.7}" y2="{top+70}"/></g>'
             f'<rect x="{x-60}" y="{top+10}" width="22" height="16" fill="#c42826"/>')
 
+import os as _os
+PHOTOS = "/home/claude/tec/site/assets/img/references"
+def visual(r, k, p="{P}"):
+    for ext in ("webp", "jpg"):
+        f = f"{PHOTOS}/{r['slug']}.{ext}"
+        if _os.path.exists(f):
+            return f'<img src="{p}assets/img/references/{r["slug"]}.{ext}" alt="{r["name"]}, {r["loc"].split(" · ")[0]} — {r["typ"]}" loading="lazy" width="1200" height="750">'
+    return svg(r["kind"], k)
+
 def svg(kind, k="a", wip=True):
     g = _grid().replace("{k}", k)
     ground = '<line x1="0" y1="340" x2="640" y2="340" stroke="#e8ebff" stroke-width="2"/><g stroke="rgba(232,235,255,.25)">' + "".join(f'<line x1="{i}" y1="340" x2="{i-12}" y2="354"/>' for i in range(10, 640, 18)) + '</g>'
@@ -50,6 +59,8 @@ def svg(kind, k="a", wip=True):
     elif kind == "industrie":
         body = ('<path d="M70 340V180l120-50v50l120-50v50l120-50v50l120-50v210" fill="rgba(58,75,149,.35)" stroke="#e8ebff" stroke-width="2"/>'
                 + "".join(f'<rect x="{x}" y="250" width="70" height="90" fill="none" stroke="#e8ebff" stroke-width="1.6"/>' for x in (110, 230, 350, 470)))
+    elif kind == "rehab":
+        body = _bldg(170, 340, 220, 2, fh=48, win=3, roof="pitch") + _bldg(440, 340, 90, 1, fh=44, win=1, roof="pitch") + '<g stroke="#c42826" stroke-width="2" fill="none" stroke-dasharray="6 5"><rect x="160" y="180" width="240" height="165"/></g>'
     elif kind == "bureaux":
         body = _bldg(120, 340, 400, 5, fh=40, win=8) + '<rect x="290" y="300" width="60" height="40" fill="#121836" stroke="#e8ebff" stroke-width="2"/>'
     if kind == "babylone" and wip:
@@ -59,39 +70,46 @@ def svg(kind, k="a", wip=True):
     return f'<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">{g}{sun}{body}{ground}{cote}</svg>'
 
 REFS = [
- dict(slug="element-embrun", kind="element", name="Élément", loc="Embrun (05) · Hautes-Alpes",
-      typ="44 logements collectifs en accession libre", mo="SCCV Élément — Novélia Résidences",
+ dict(slug="element-embrun", kind="element", name="Élément", loc="Embrun (05) · Hautes-Alpes", typo="logement",
+      typ="44 logements collectifs en accession libre", mo="SCCV Élément (promotion privée)",
       archi="Architectes & Ko", mission="Maîtrise d'œuvre d'exécution (DET), OPC, visa des plans EXE, validation des situations de travaux",
       dates="Ordre de service : 12 mai 2025 · Livraison prévue début 2027", status="En travaux", phase="Finitions, façades et VRD",
       lots="22 lots séparés, du désamiantage aux enrobés",
       text="Deux bâtiments en R+3 sur sous-sol commun, raccordés au réseau de chaleur de la ville. TEC dirige l'exécution des travaux depuis l'ordre de service : réunion hebdomadaire le lundi sur la base vie, plus de 60 comptes rendus diffusés, tests d'étanchéité à l'air intermédiaires et coordination avec les concessionnaires (Enedis, chauffage urbain, eau de l'Embrunais).",
       facts=["44 logements", "R+3 + sous-sol", "22 lots", "Réseau de chaleur"]),
- dict(slug="jardins-de-babylone", kind="babylone", name="Les Jardins de Babylone", loc="Saint-Jean-de-Maurienne (73) · Savoie",
-      typ="17 logements collectifs en accession libre", mo="SCCV Les Jardins de Babylone — Novélia Résidences",
+ dict(slug="jardins-de-babylone", kind="babylone", name="Les Jardins de Babylone", loc="Saint-Jean-de-Maurienne (73) · Savoie", typo="logement",
+      typ="17 logements collectifs en accession libre", mo="SCCV Les Jardins de Babylone (promotion privée)",
       archi="Architectes & Ko", mission="Maîtrise d'œuvre d'exécution, OPC, contrôle des situations, agrément des sous-traitants",
       dates="Ordre de service : 14 janvier 2026", status="En travaux", phase="Second œuvre",
       lots="19 lots séparés",
       text="Résidence en R+3 au cœur de la Maurienne. Le gros œuvre a été mené en un peu plus de quatre mois ; le bâtiment est aujourd'hui hors d'eau et hors d'air et le second œuvre progresse étage par étage. TEC anime la réunion de chantier chaque jeudi et pilote la synchronisation des lots de finition.",
       facts=["17 logements", "R+3", "19 lots", "Charpente lamellé-collé"]),
- dict(slug="horizon-belledonne", kind="belledonne", name="Horizon Belledonne", loc="La Terrasse (38) · Isère",
-      typ="25 appartements et 10 maisons, dont 30 logements en accession sociale (PSLA)", mo="Novélia Résidences, en partenariat avec SOLIHA",
+ dict(slug="horizon-belledonne", kind="belledonne", name="Horizon Belledonne", loc="La Terrasse (38) · Isère", typo="logement",
+      typ="25 appartements et 10 maisons, dont 30 logements en accession sociale (PSLA)", mo="SCCV Horizon Belledonne, en partenariat avec SOLIHA",
       archi="—", mission="Pilotage de l'exécution et coordination des entreprises",
       dates="Mission en cours", status="En cours", phase="",
       lots="Opération mixte collectif + individuel",
       text="Programme mixte dans le Grésivaudan, face à la chaîne de Belledonne : un collectif et des maisons, majoritairement en prêt social location-accession (PSLA). Le pilotage doit concilier deux typologies de chantier sur un même site et un calendrier de commercialisation sociale.",
       facts=["35 logements", "PSLA", "Collectif + maisons"]),
- dict(slug="mti-claix", kind="industrie", name="MTI", loc="Claix (38) · Isère",
-      typ="Rénovation lourde de locaux industriels en site occupé", mo="MTI — opération réalisée avec CGBI, contractant général",
-      archi="—", mission="Pilotage d'exécution et coordination en site occupé",
-      dates="Mission en cours", status="En cours", phase="",
-      lots="Travaux phasés, activité maintenue",
-      text="Rénovation lourde de bâtiments industriels sans interrompre la production : phasage par zones, coordination des accès, consignations et sécurité des personnels de l'entreprise au quotidien.",
-      facts=["Industrie", "Site occupé", "Avec CGBI"]),
- dict(slug="soliha-eybens", kind="bureaux", name="Soliha", loc="Eybens (38) · Isère",
-      typ="Aménagement et réorganisation de plateaux de bureaux", mo="SOLIHA — opération réalisée avec CGBI, contractant général",
+ dict(slug="mti-claix", kind="industrie", name="MTI", loc="Claix (38) · Isère", typo="industrie",
+      typ="Réaménagement d'un bâtiment industriel en site occupé", mo="CGBI, contractant général, pour MTI",
+      archi="—", mission="Maîtrise d'œuvre d'exécution et pilotage des travaux, validation des situations jusqu'aux décomptes généraux définitifs",
+      dates="Chantier de 7 mois · Livré en 2026", status="Livré", phase="",
+      lots="Charpente métallique, menuiseries intérieures, peinture, plomberie, ventilation et climatisation, courants forts et faibles",
+      text="Réaménagement d'un bâtiment industriel chemin de l'Industrie à Claix, mené pour le compte de CGBI, contractant général, sans interrompre l'activité de l'entreprise. TEC a piloté les travaux sur sept mois : phasage par zones, coordination des corps d'état, contrôle des situations mensuelles et clôture financière de chaque lot par décompte général définitif.",
+      facts=["Industrie", "Site occupé", "7 mois", "Pour CGBI"]),
+ dict(slug="soliha-eybens", kind="bureaux", name="Soliha", loc="Eybens (38) · Isère", typo="industrie",
+      typ="Aménagement et réorganisation de plateaux de bureaux", mo="CGBI, contractant général, pour SOLIHA",
       archi="—", mission="Pilotage d'exécution et coordination des corps d'état",
-      dates="Mission en cours", status="En cours", phase="",
+      dates="Opération réalisée avec CGBI", status="En cours", phase="",
       lots="Cloisonnement, CVC, électricité, finitions",
-      text="Réaménagement de plateaux tertiaires : cloisonnement, réseaux et finitions, organisés pour limiter la gêne des équipes en place et tenir un calendrier de réintégration précis.",
-      facts=["Tertiaire", "Plateaux de bureaux", "Avec CGBI"]),
+      text="Réaménagement de plateaux tertiaires pour le compte de CGBI : cloisonnement, réseaux et finitions, organisés pour limiter la gêne des équipes en place et tenir un calendrier de réintégration précis.",
+      facts=["Tertiaire", "Plateaux de bureaux", "Pour CGBI"]),
+ dict(slug="soliha-meylan", kind="rehab", name="Soliha Meylan", loc="Meylan (38) · Isère", typo="rehab",
+      typ="Réhabilitation d'un tènement vacant et de son cabanon en logement locatif social", mo="SOLIHA",
+      archi="—", mission="Planification des travaux, pilotage et coordination des 11 lots",
+      dates="Travaux programmés d'octobre 2026 à juin 2027", status="En préparation", phase="Préparation de chantier",
+      lots="11 lots : démolition-maçonnerie, charpente-couverture, menuiseries, plâtrerie-isolation, carrelage, électricité, plomberie-ventilation, chauffage, peinture, façades",
+      text="Transformer un bâti vacant en logement social : la réhabilitation impose de composer avec l'existant, ses reprises structurelles et ses surprises. TEC a établi le planning des travaux, de la préparation à la réception, et coordonnera les onze lots sur le chantier.",
+      facts=["Réhabilitation", "Logement social", "11 lots"]),
 ]

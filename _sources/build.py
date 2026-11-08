@@ -2,7 +2,7 @@
 import os, sys, json, datetime, re
 sys.path.insert(0, os.path.dirname(__file__))
 from common import *
-from refs import REFS, svg
+from refs import REFS, svg, visual
 from posts import BLOG, ACTU
 from metiers import SERVICES
 
@@ -16,8 +16,8 @@ def ref_card(r, p="{P}", tag="a"):
     st = "wip" if r["status"] != "Livré" else ""
     facts = "".join(f'<span class="tag">{f}</span>' for f in r["facts"])
     ph = f'<div class="progress-l"><span>Phase en cours</span><b>{r["phase"]}</b></div>' if r.get("phase") else ""
-    return f'''<a class="ref reveal" href="{p}references.html#{r["slug"]}">
-<div class="ref-visual">{svg(r["kind"], r["slug"][:4])}<span class="status {st}">{r["status"]}</span></div>
+    return f'''<a class="ref reveal" href="{p}references.html#{r["slug"]}" data-cat="{r.get("typo","")}">
+<div class="ref-visual">{visual(r, r["slug"][:4], p)}<span class="status {st}">{r["status"]}</span></div>
 <div class="ref-body"><span class="loc">{r["loc"]}</span><h3>{r["name"]}</h3><p>{r["typ"]}</p>{ph}<div class="ref-facts">{facts}</div></div></a>'''
 
 def post_card(x, base, kind):
@@ -45,7 +45,7 @@ home = f'''
 <section class="hero"><div class="wrap">
  <div class="hero-grid">
   <div>
-   <span class="eyebrow">Pilotage &amp; ingénierie de chantier · Alpes</span>
+   <span class="eyebrow">Bureau d'études d'exécution &amp; d'économie · Alpes</span>
    <h1>Vos chantiers, pilotés du plan à la <em>réception</em></h1>
    <p class="lead">TEC assure la maîtrise d'œuvre d'exécution, l'OPC et l'économie de la construction de vos opérations de logements et d'immobilier d'entreprise, en Isère, Savoie, Haute-Savoie et Hautes-Alpes.</p>
    <div class="hero-actions"><a class="btn btn--red" href="{{P}}contact.html">Confier une mission {icon("arrow")}</a><a class="btn btn--ghost-l" href="{{P}}references.html">Voir nos chantiers</a></div>
@@ -58,7 +58,7 @@ home = f'''
    <div class="g-foot"><div><b>22</b><small>lots coordonnés</small></div><div><b>1/sem.</b><small>réunion de chantier</small></div><div><b>48 h</b><small>diffusion du CR</small></div></div>
   </div>
  </div>
- <div class="strip"><span>Ils nous confient leurs opérations</span><ul><li>NOVÉLIA RÉSIDENCES</li><li>CGBI</li><li>MTI</li><li>SOLIHA</li></ul></div>
+ <div class="strip"><span>Logements · Tertiaire · Industrie · Réhabilitation</span><ul><li>Isère</li><li>Savoie</li><li>Haute-Savoie</li><li>Hautes-Alpes</li></ul></div>
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -82,15 +82,22 @@ home = f'''
  <div class="steps">{steps_h}</div>
 </div></section>
 
+<section class="section section--white"><div class="wrap split split--top">
+ <div class="reveal"><span class="eyebrow">Notre vision</span><h2>La maîtrise, du premier trait au dernier PV</h2></div>
+ <div class="prose reveal"><p>Un projet de construction se joue rarement sur une grande décision. Il se gagne, ou se perd, sur des centaines de petits arbitrages : une réservation oubliée, un plan d'exécution visé trop tard, une situation validée sans contrôle, une interface entre deux lots que personne n'a anticipée.</p>
+ <p>TEC est né de cette conviction. Notre métier est d'apporter au maître d'ouvrage <strong>la rigueur technique et la lucidité économique</strong> qui sécurisent chaque étape : un planning qui fait autorité, des comptes rendus qui engagent, des coûts suivis à l'euro près et une réception préparée dès le premier jour.</p>
+ <blockquote>Piloter, c'est anticiper. Nous voulons que nos clients n'apprennent jamais une mauvaise nouvelle de chantier trop tard.</blockquote></div>
+</div></section>
+
 <section class="section"><div class="wrap">
- <div class="head"><div><span class="eyebrow">Références</span><h2>Des chantiers en cours, de la Maurienne à l'Embrunais</h2></div>
+ <div class="head"><div><span class="eyebrow">Références</span><h2>Des chantiers pilotés, de la Maurienne à l'Embrunais</h2></div>
  <div><p class="lead">Logements collectifs, programmes mixtes, rénovation industrielle et tertiaire : découvrez les opérations que nous pilotons.</p><p><a class="link-arrow" href="{{P}}references.html">Toutes les références</a></p></div></div>
- <div class="refs">{"".join(ref_card(REF[s]) for s in ["element-embrun","jardins-de-babylone","horizon-belledonne"])}</div>
+ <div class="refs">{"".join(ref_card(REF[s]) for s in ["element-embrun","jardins-de-babylone","mti-claix"])}</div>
 </div></section>
 
 <section class="section section--white"><div class="wrap split">
  <div class="reveal"><span class="eyebrow">Pourquoi TEC</span><h2>La rigueur d'un pilote, l'œil d'un économiste</h2>
- <p class="lead">Créée en 2025 au sein du Groupe Novélia, TEC met au service des maîtres d'ouvrage une expérience forgée sur des dizaines d'opérations de promotion et de construction dans les Alpes.</p>
+ <p class="lead">TEC est un bureau d'études spécialisé dans l'exécution et l'économie de la construction. Nous ne concevons pas des chantiers sur le papier : nous les faisons aboutir, au prix et au délai convenus, aux côtés du maître d'ouvrage.</p>
  <ul class="checks"><li>Une présence terrain hebdomadaire et des comptes rendus qui engagent.</li><li>Un planning tous corps d'état vivant, mis à jour chaque semaine.</li><li>Un contrôle financier rigoureux des situations et des avenants.</li><li>Une connaissance fine des entreprises et des contraintes de montagne.</li></ul>
  <p class="mt-2"><a class="btn btn--navy" href="{{P}}agence.html">Découvrir l'agence {icon("arrow")}</a></p></div>
  <div class="engage reveal">
@@ -170,52 +177,58 @@ for path, s in SERVICES.items():
     pages.append(page(path, s["title"], s["desc"], b, ld=ld, crumbs=[("Accueil",""),("Nos métiers","nos-metiers.html"),(s["eyebrow"],path)]))
 
 # ======================= RÉFÉRENCES =======================
-b = page_hero([("Accueil","index.html"),("Références","references.html")], "Références chantiers", "Nos chantiers en cours",
-  "Logements collectifs, programme mixte en accession sociale, rénovation industrielle et tertiaire en site occupé : les opérations que TEC pilote aujourd'hui.")
+b = page_hero([("Accueil","index.html"),("Références","references.html")], "Références chantiers", "Nos références",
+  "Logements collectifs, programme mixte en accession sociale, bâtiments industriels et tertiaires en site occupé, réhabilitation : les opérations pilotées par TEC.")
 det = ""
 for r in REFS:
     posts = [x for x in BLOG if x["ref"] == r["slug"]]
     pl = "".join(f'<li><a href="{{P}}blog/{x["slug"]}.html">{x["title"]}</a></li>' for x in posts)
     pl = f'<h4 class="mt-2">Sur le blog</h4><ul>{pl}</ul>' if pl else ""
     dl = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in [("Programme", r["typ"]), ("Maître d'ouvrage", r["mo"]), ("Maîtrise d'œuvre", r["archi"]) if r["archi"] != "—" else (None, None), ("Mission TEC", r["mission"]), ("Lots", r["lots"]), ("Calendrier", r["dates"])] if k)
-    det += f'''<article class="ref-detail" id="{r["slug"]}">
-<div class="ref-visual reveal">{svg(r["kind"], r["slug"][:4]+"d")}<span class="status wip">{r["status"]}</span></div>
+    det += f'''<article class="ref-detail" id="{r["slug"]}" data-cat="{r.get("typo","")}">
+<div class="ref-visual reveal">{visual(r, r["slug"][:4]+"d")}<span class="status{"" if r["status"]=="Livré" else " wip"}">{r["status"]}</span></div>
 <div class="reveal"><span class="eyebrow">{r["loc"]}</span><h2>{r["name"]}</h2><p class="lead">{r["text"]}</p><dl class="kv">{dl}</dl>
 <div class="tag-list mt-2">{"".join(f'<span class="tag">{f}</span>' for f in r["facts"])}</div>{pl}</div>
 </article>'''
-b += f'''<section class="section"><div class="wrap">{det}
-<p class="note mt-2">Illustrations schématiques. Les perspectives et photographies des opérations sont disponibles sur demande.</p></div></section>
+filt = '<div class="filters" role="group" aria-label="Filtrer par typologie"><button data-f="all" aria-pressed="true">Toutes</button><button data-f="logement" aria-pressed="false">Logements</button><button data-f="industrie" aria-pressed="false">Industrie &amp; tertiaire</button><button data-f="rehab" aria-pressed="false">Réhabilitation</button></div>'
+b += f'''<section class="section"><div class="wrap">{filt}{det}
+<p class="note mt-2">Perspectives non contractuelles et illustrations schématiques.</p></div></section>
 <section class="section section--ink"><div class="wrap split">
-<div><span class="eyebrow">Le Groupe Novélia</span><h2>Une expérience adossée à plus de 45 opérations</h2><p class="lead">TEC est née au sein du Groupe Novélia, promoteur et aménageur alpin depuis 2015 : 366 logements et lots livrés, 166 logements en travaux, 34 communes partenaires.</p></div>
-<div><ul class="checks"><li>Promotion immobilière avec Novélia Résidences</li><li>Aménagement foncier avec Novélia Aménagement</li><li>Immobilier d'entreprise clés en main avec CGBI</li><li>Cool roofing avec ALBEDIA</li></ul></div>
+<div><span class="eyebrow">Nos typologies</span><h2>Du collectif de montagne au bâtiment d'activité</h2><p class="lead">Nos chantiers couvrent des contextes très différents : résidences en altitude soumises aux intempéries, programmes en accession sociale au calendrier contraint, sites industriels qui ne peuvent pas s'arrêter, bâtis anciens à réhabiliter.</p></div>
+<div><ul class="checks"><li><b>Logements collectifs</b> en accession libre et sociale</li><li><b>Programmes mixtes</b> collectif et individuel</li><li><b>Industrie et tertiaire</b>, y compris en site occupé, pour des contractants généraux</li><li><b>Réhabilitation</b> de bâtis existants</li></ul></div>
 </div></section>{cta_band()}'''
 pages.append(page("references.html", "Références chantiers en Isère, Savoie, Hautes-Alpes | TEC",
-  "Élément à Embrun, Les Jardins de Babylone à Saint-Jean-de-Maurienne, Horizon Belledonne, chantiers CGBI : les opérations pilotées par TEC.",
+  "Élément à Embrun, Les Jardins de Babylone, Horizon Belledonne, MTI à Claix et Soliha pour CGBI : les opérations pilotées par TEC.",
   b, current="references.html", crumbs=[("Accueil",""),("Références","references.html")]))
 
 # ======================= AGENCE =======================
-team = [("BC","Benjamin Camerino","Directeur général","Associé fondateur de TEC, il dirige l'agence et ses engagements auprès des maîtres d'ouvrage. Directeur associé de CGBI, il apporte une solide culture de la conception-réalisation et de l'immobilier d'entreprise."),
+team = [("BC","Benjamin Camerino","Directeur général","Associé fondateur de TEC, il dirige l'agence et porte ses engagements auprès des maîtres d'ouvrage. Il apporte une solide culture de la conception-réalisation et de l'immobilier d'entreprise."),
         ("DD","David Durigon","Responsable technique","Il conduit la maîtrise d'œuvre d'exécution et l'OPC des chantiers : réunions hebdomadaires, comptes rendus, visas, situations de travaux et coordination des entreprises."),
         ("SO","Sandra Olandese","Cheffe de projet conception","Elle pilote les études de conception : faisabilité, plans, dossiers d'autorisation et coordination avec les architectes et bureaux d'études.")]
 th = "".join(f'<article class="member reveal"><div class="avatar" aria-hidden="true">{i}</div><span class="role">{r}</span><h3>{n}</h3><p>{d}</p></article>' for i, n, r, d in team)
 b = page_hero([("Accueil","index.html"),("L'agence","agence.html")], "L'agence", "Technique et Économie de la Construction",
-  "TEC est le bureau d'ingénierie de chantier du Groupe Novélia : une équipe resserrée, basée à Grenoble, qui pilote des opérations de logements et d'immobilier d'entreprise dans les Alpes.")
+  "TEC est un bureau d'études d'exécution et d'économie de la construction : une équipe resserrée, basée à Grenoble, qui pilote des opérations de logements et d'immobilier d'entreprise dans tout l'arc alpin.")
 b += f'''<section class="section"><div class="wrap split split--top">
 <div class="reveal"><span class="eyebrow">Notre histoire</span><h2>Née du terrain, en 2025</h2></div>
-<div class="prose reveal"><p>TEC — Technique et Économie de la Construction — a été créée en mars 2025 par le <strong>Groupe Novélia</strong> et <strong>Benjamin Camerino</strong>. L'objectif : intégrer au groupe la maîtrise d'œuvre d'exécution, le pilotage et l'économie de chantier, et mettre ce savoir-faire à la disposition d'autres maîtres d'ouvrage.</p>
-<p>Le Groupe Novélia, fondé en 2015 par Stéphane Jouglard, conçoit et réalise des opérations de logements et d'aménagement dans les vallées alpines. Aux côtés de Novélia Résidences, Novélia Aménagement, CGBI et ALBEDIA, TEC intervient sur la partie la plus concrète de la chaîne de valeur : l'exécution et le pilotage des chantiers.</p>
+<div class="prose reveal"><p>TEC — Technique et Économie de la Construction — a été créée à Grenoble en mars 2025 par des professionnels de la promotion et de la construction, autour de <strong>Benjamin Camerino</strong>. Son ambition : offrir aux maîtres d'ouvrage un interlocuteur unique pour l'exécution, le pilotage et l'économie de leurs chantiers.</p>
+<p>Le nom dit l'essentiel : la <strong>technique</strong>, pour que l'ouvrage soit conforme et durable ; l'<strong>économie</strong>, pour que le budget soit tenu. Deux exigences que nous appliquons à chaque opération, du collectif de montagne au bâtiment industriel en site occupé.</p>
 <blockquote>Un chantier réussi se prépare dès la conception et se gagne chaque semaine sur le terrain.</blockquote></div>
 </div></section>
 <section class="section section--white"><div class="wrap">
 <div class="head"><div><span class="eyebrow">L'équipe</span><h2>Des interlocuteurs directs</h2></div><p class="lead">Pas d'intermédiaire : les personnes qui vous répondent sont celles qui pilotent votre opération.</p></div>
 <div class="team">{th}</div></div></section>
 <section class="section section--ink"><div class="wrap split">
-<div><span class="eyebrow">Nos valeurs</span><h2>Développer, construire, respecter</h2><p class="lead">Nous partageons les valeurs du Groupe Novélia : être à l'écoute, être force de proposition et informer régulièrement chaque partie prenante. Communiquer, c'est anticiper.</p>
+<div><span class="eyebrow">Nos valeurs</span><h2>Rigueur, transparence, engagement</h2><p class="lead">Être à l'écoute, être force de proposition et informer chaque partie prenante, chaque semaine. Sur un chantier, communiquer, c'est anticiper.</p>
 <div class="zone"><span>Grenoble</span><span>Grésivaudan</span><span>Oisans</span><span>Maurienne</span><span>Chablais</span><span>Champsaur</span><span>Embrunais</span></div></div>
 <div><ul class="checks"><li><b>Transparence :</b> des comptes rendus clairs et des chiffres partagés.</li><li><b>Réactivité :</b> des décisions prises en direct, sans circuit inutile.</li><li><b>Exigence :</b> qualité, sécurité et propreté sur chaque chantier.</li><li><b>Respect :</b> des entreprises, des riverains et des futurs occupants.</li></ul></div>
+</div></section>
+<section class="section"><div class="wrap split split--top">
+<div class="reveal"><span class="eyebrow">Nous rejoindre</span><h2>Conducteurs de travaux, pilotes OPC, économistes</h2></div>
+<div class="prose reveal"><p>TEC se développe et accueille des profils qui aiment le terrain et la rigueur : conducteurs de travaux, pilotes OPC, économistes de la construction, chargés d'études. Vous partagez notre exigence ? Envoyez-nous votre candidature spontanée.</p>
+<p><a class="btn btn--navy" href="mailto:{EMAIL}?subject=Candidature%20spontan%C3%A9e">{icon("mail")}Candidature spontanée</a></p></div>
 </div></section>{cta_band()}'''
 pages.append(page("agence.html", "L'agence TEC à Grenoble : équipe, histoire, valeurs",
-  "TEC, bureau d'ingénierie de chantier du Groupe Novélia à Grenoble. L'équipe : Benjamin Camerino, David Durigon, Sandra Olandese.",
+  "TEC, bureau d'études d'exécution et d'économie de la construction à Grenoble. L'équipe : Benjamin Camerino, David Durigon, Sandra Olandese.",
   b, current="agence.html", crumbs=[("Accueil",""),("L'agence","agence.html")]))
 
 # ======================= BLOG & ACTUALITÉS =======================
@@ -307,13 +320,13 @@ pages.append(page("merci.html", "Merci — TEC Pilotage & Ingénierie", "Votre m
 b = page_hero([("Accueil","index.html"),("Mentions légales","mentions-legales.html")], "Informations légales", "Mentions légales", "Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.")
 b += f'''<section class="section"><div class="wrap prose">
 <h2>Éditeur du site</h2>
-<p><strong>TECHNIQUE ET ÉCONOMIE DE LA CONSTRUCTION</strong> (sigle et nom commercial : TEC)<br>Société par actions simplifiée au capital de 5 000 €<br>Siège social : 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble<br>RCS Grenoble 941 810 749 — EUID FR3801.941810749<br>N° de TVA intracommunautaire : FR60941810749<br>Présidente : GROUPE NOVÉLIA, SARL, RCS Grenoble 948 146 691, représentée par son gérant<br>Téléphone : {PHONE} — E-mail : <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+<p><strong>TECHNIQUE ET ÉCONOMIE DE LA CONSTRUCTION</strong> (sigle et nom commercial : TEC)<br>Société par actions simplifiée au capital de 5 000 €<br>Siège social : 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble<br>RCS Grenoble 941 810 749 — EUID FR3801.941810749<br>N° de TVA intracommunautaire : FR60941810749<br>Téléphone : {PHONE} — E-mail : <a href="mailto:{EMAIL}">{EMAIL}</a></p>
 <h2>Directeur de la publication</h2>
-<p>M. Stéphane JOUGLARD, gérant de GROUPE NOVÉLIA, présidente de TEC.</p>
+<p>M. Stéphane JOUGLARD.</p>
 <h2>Hébergement</h2>
 <p>OVH SAS — 2 rue Kellermann, 59100 Roubaix, France — <a href="https://www.ovhcloud.com" rel="noopener">www.ovhcloud.com</a></p>
 <h2>Propriété intellectuelle</h2>
-<p>L'ensemble des contenus de ce site (textes, logotypes, illustrations, plaquette) est la propriété de TEC ou du Groupe Novélia, sauf mention contraire. Toute reproduction, totale ou partielle, sans autorisation écrite préalable est interdite. Les marques et logos des partenaires cités restent la propriété de leurs titulaires. Les polices de caractères Archivo et Inter Tight sont distribuées sous licence SIL Open Font License.</p>
+<p>L'ensemble des contenus de ce site (textes, logotypes, illustrations, plaquette) est la propriété de TEC, sauf mention contraire. Toute reproduction, totale ou partielle, sans autorisation écrite préalable est interdite. Les marques et logos des partenaires cités restent la propriété de leurs titulaires. Les polices de caractères Archivo et Inter Tight sont distribuées sous licence SIL Open Font License.</p>
 <h2>Contenus d'information</h2>
 <p>Les articles de la rubrique Actualités sont fournis à titre d'information générale, à partir des sources publiques citées dans chaque article, et ne constituent pas un conseil juridique ou technique. Les illustrations des références sont schématiques et non contractuelles.</p>
 <h2>Liens</h2>
@@ -328,7 +341,7 @@ b += f'''<section class="section"><div class="wrap prose">
 <h2>Responsable du traitement</h2><p>TECHNIQUE ET ÉCONOMIE DE LA CONSTRUCTION (TEC), 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble — <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Données collectées et finalités</h2><p>Le formulaire de contact collecte vos nom, société, coordonnées, profil et message, dans le seul but de répondre à votre demande et, le cas échéant, d'établir une proposition commerciale. Base légale : votre consentement et nos mesures précontractuelles.</p>
 <h2>Durée de conservation</h2><p>Les demandes sans suite sont conservées au maximum trois ans à compter du dernier contact. Les données liées à un contrat sont conservées pendant la durée légale applicable.</p>
-<h2>Destinataires</h2><p>Les données sont destinées aux seules équipes de TEC et, si nécessaire, aux sociétés du Groupe Novélia concernées par votre projet. Elles ne sont ni vendues ni cédées. Le site est hébergé par OVH SAS en France.</p>
+<h2>Destinataires</h2><p>Les données sont destinées aux seules équipes de TEC. Elles ne sont ni vendues ni cédées. Le site est hébergé par OVH SAS en France.</p>
 <h2>Cookies et mesure d'audience</h2><p>Ce site n'utilise aucun cookie publicitaire ni outil de suivi tiers. Les polices de caractères sont hébergées localement : aucune donnée n'est transmise à un service tiers lors de votre visite.</p>
 <h2>Vos droits</h2><p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Pour l'exercer : <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" rel="noopener">www.cnil.fr</a>).</p>
 </div></section>'''
@@ -376,12 +389,12 @@ open(OUT+"/feed.xml","w").write("\n".join(rss))
 # llms.txt : résumé pour les moteurs de réponse IA
 llms = f"""# TEC — Pilotage & Ingénierie (le-tec.fr)
 
-> TEC (Technique et Économie de la Construction) est un bureau d'ingénierie de chantier basé à Grenoble (38), filiale du Groupe Novélia. TEC assure la maîtrise d'œuvre d'exécution (MOEX : DCE, ACT, VISA, DET, AOR), l'OPC (ordonnancement, pilotage, coordination), le suivi de chantier, l'économie de la construction, l'assistance à maîtrise d'ouvrage et l'accompagnement à la conception architecturale, pour des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.
+> TEC (Technique et Économie de la Construction) est un bureau d'ingénierie de chantier basé à Grenoble (38). TEC assure la maîtrise d'œuvre d'exécution (MOEX : DCE, ACT, VISA, DET, AOR), l'OPC (ordonnancement, pilotage, coordination), le suivi de chantier, l'économie de la construction, l'assistance à maîtrise d'ouvrage et l'accompagnement à la conception architecturale, pour des opérations de logements et d'immobilier d'entreprise en Isère, Savoie, Haute-Savoie et Hautes-Alpes.
 
 - Directeur général : Benjamin Camerino. Responsable technique : David Durigon. Cheffe de projet conception : Sandra Olandese.
 - Adresse : Immeuble Équinoxe, 163 cours de la Libération et du Général de Gaulle, 38100 Grenoble. Téléphone : {PHONE}. E-mail : {EMAIL}.
 - SAS au capital de 5 000 €, RCS Grenoble 941 810 749, créée en mars 2025.
-- Chantiers en cours : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), chantiers CGBI pour MTI (Claix) et Soliha (Eybens).
+- Références : Élément (Embrun, 44 logements), Les Jardins de Babylone (Saint-Jean-de-Maurienne, 17 logements), Horizon Belledonne (La Terrasse, 35 logements dont 30 en PSLA), MTI à Claix (bâtiment industriel réaménagé en site occupé pour CGBI, livré en 2026), Soliha à Eybens (bureaux, pour CGBI), Soliha à Meylan (réhabilitation en logement social).
 
 ## Métiers
 """ + "\n".join(f"- [{t}]({SITE}/{h}): {d}" for h, ic, t, d in METIERS) + f"""

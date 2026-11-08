@@ -18,7 +18,7 @@ SERVICES = {
          ("PC", "Autorisations", "Constitution et dépôt du permis de construire ou d'aménager, suivi de l'instruction, pièces complémentaires.")],
  faq=[("Êtes-vous architectes ?", "Non. TEC est un bureau d'ingénierie de chantier. Nous intervenons en conception aux côtés des architectes et bureaux d'études : faisabilité, coordination des études, plans, estimation et dossiers. Lorsque la loi impose le recours à un architecte pour le permis de construire, le projet est porté et signé par un architecte partenaire."),
       ("Pourquoi associer le maître d'œuvre d'exécution dès la conception ?", "Parce que les choix de conception (système constructif, réseaux, phasage, accès) déterminent le coût et la durée du chantier. Les anticiper évite les reprises de plans, les avenants et les retards."),
-      ("Intervenez-vous pour des lotissements et des bâtiments d'activité ?", "Oui : logements collectifs et individuels groupés, lotissements, bâtiments tertiaires et industriels, notamment avec CGBI, contractant général du Groupe Novélia.")],
+      ("Intervenez-vous pour des lotissements et des bâtiments d'activité ?", "Oui : logements collectifs et individuels groupés, lotissements, bâtiments tertiaires et industriels, notamment pour le compte de contractants généraux comme CGBI.")],
  refs=["element-embrun", "horizon-belledonne"]),
 "maitrise-oeuvre-execution.html": dict(
  key="moe", eyebrow="Maîtrise d'œuvre d'exécution",

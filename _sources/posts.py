@@ -2,6 +2,30 @@
 """Contenus du blog chantiers et des actualités juridiques & techniques."""
 
 BLOG = [
+ dict(slug="mti-claix-batiment-industriel-reamenage", date="2026-09-10", ref="mti-claix", cat="Chantiers CGBI",
+  title="MTI à Claix : un bâtiment industriel réaménagé en sept mois, en site occupé",
+  desc="Pour le compte de CGBI, contractant général, TEC a piloté le réaménagement du bâtiment industriel de MTI à Claix : sept mois de travaux, activité maintenue, lots soldés.",
+  body="""<p>Le chantier de <strong>MTI à Claix</strong> est terminé. Mené pour le compte de <strong>CGBI</strong>, contractant général en immobilier d'entreprise, ce réaménagement d'un bâtiment industriel situé chemin de l'Industrie s'est déroulé sur <strong>sept mois</strong>, sans interrompre l'activité de l'entreprise.</p>
+<h2>Une opération tous corps d'état</h2>
+<ul>
+<li>charpente et constructions métalliques ;</li>
+<li>menuiseries intérieures et peinture ;</li>
+<li>plomberie, ventilation et climatisation ;</li>
+<li>courants forts et courants faibles.</li>
+</ul>
+<h2>Le rôle de TEC</h2>
+<p>TEC assurait la maîtrise d'œuvre d'exécution et le pilotage des travaux : coordination des entreprises, phasage des interventions avec l'exploitant, contrôle de l'avancement et validation des situations mensuelles avant facturation.</p>
+<div class="callout"><h4>Une clôture financière maîtrisée</h4><p>Entre juin et septembre 2026, chaque lot a été soldé par un décompte général définitif (DGD) établi à partir des situations validées par TEC. Une étape souvent négligée, qui conditionne pourtant la sérénité du maître d'ouvrage après la livraison.</p></div>
+<p>Une référence de plus pour TEC en immobilier d'entreprise, où la tenue des délais se mesure aussi à la continuité de l'activité du client.</p>"""),
+ dict(slug="soliha-meylan-rehabilitation-logement-social", date="2026-10-12", ref="soliha-meylan", cat="Soliha Meylan",
+  title="Soliha à Meylan : un bâti vacant bientôt transformé en logement social",
+  desc="Réhabilitation d'un tènement vacant et de son cabanon en logement locatif social à Meylan : 11 lots, travaux programmés d'octobre 2026 à juin 2027.",
+  body="""<p>À Meylan, <strong>SOLIHA</strong> engage la réhabilitation d'un tènement immobilier vacant et de son cabanon pour créer un <strong>logement locatif social</strong>. TEC a établi le planning des travaux et coordonnera le chantier.</p>
+<h2>Onze lots, neuf mois</h2>
+<p>Démolition et maçonnerie, charpente-couverture-zinguerie, menuiseries extérieures et intérieures, plâtrerie-isolation, carrelage, électricité, plomberie-ventilation, chauffage avec contrat de maintenance, peintures et façades : le calendrier s'étend d'octobre 2026, avec la période de préparation, jusqu'à la réception prévue en juin 2027.</p>
+<h2>Réhabiliter, c'est composer avec l'existant</h2>
+<p>Sur un bâti ancien, le planning doit intégrer les inconnues : état réel de la charpente, reprises de maçonnerie, réseaux à reprendre entièrement. C'est pourquoi la période de préparation est essentielle : diagnostics complémentaires, réservations, commandes des menuiseries à délai long.</p>
+<p>Nous publierons ici les grandes étapes du chantier.</p>"""),
  dict(slug="element-embrun-derniere-ligne-droite", date="2026-11-03", ref="element-embrun", cat="Élément · Embrun",
   title="Élément à Embrun : la dernière ligne droite avant la livraison",
   desc="Façades, ascenseurs, peintures, espaces verts : point d'avancement du chantier Élément (44 logements, Embrun) au compte rendu n°63.",
@@ -88,10 +112,10 @@ BLOG = [
 <li>tenir un calendrier de livraison compatible avec le parcours des accédants en PSLA.</li>
 </ul>
 <p>Nous publierons ici les grandes étapes du chantier.</p>"""),
- dict(slug="travaux-en-site-occupe-cgbi", date="2026-09-18", ref="mti-claix", cat="Chantiers CGBI",
+ dict(slug="travaux-en-site-occupe-cgbi", date="2026-09-18", ref="soliha-eybens", cat="Chantiers CGBI",
   title="Travaux en site occupé : notre méthode sur les chantiers CGBI",
   desc="Rénovation industrielle chez MTI à Claix, réaménagement de bureaux chez Soliha à Eybens : comment TEC organise des travaux sans arrêter l'activité.",
-  body="""<p>Aux côtés de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général du Groupe Novélia, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, aménagement et réorganisation de plateaux de bureaux chez Soliha à Eybens.</p>
+  body="""<p>Pour le compte de <a href="https://www.cgbi.fr" rel="noopener">CGBI</a>, contractant général en immobilier d'entreprise, TEC pilote des chantiers d'immobilier d'entreprise réalisés <strong>en site occupé</strong> : rénovation lourde de locaux industriels chez MTI à Claix, aménagement et réorganisation de plateaux de bureaux chez Soliha à Eybens.</p>
 <h2>Cinq principes</h2>
 <ol>
 <li><strong>Phaser par zones</strong> pour que l'activité se poursuive dans les parties non concernées.</li>
@@ -133,7 +157,7 @@ ACTU = [
 <h2>Ce que la RE2020 impose</h2>
 <p>Outre les exigences de sobriété énergétique, la réglementation introduit des indicateurs carbone : l'<strong>Ic énergie</strong>, lié aux consommations des systèmes, et l'<strong>Ic construction</strong>, lié aux produits et équipements mis en œuvre, calculé en analyse de cycle de vie. Les seuils, déjà abaissés au 1er janvier 2025, poursuivront leur trajectoire en 2028 puis 2031.</p>
 <h2>Pour l'immobilier d'entreprise</h2>
-<p>Les projets de bâtiments d'activité menés en conception-réalisation (comme ceux de notre partenaire CGBI) doivent désormais intégrer le calcul RE2020 dès l'esquisse. Choix structurels, systèmes de chauffage et de production d'eau chaude, recours aux FDES individuelles plutôt qu'aux données par défaut : les arbitrages se font en amont, et l'économiste de la construction a un rôle direct à jouer.</p>
+<p>Les projets de bâtiments d'activité menés en conception-réalisation (clés en main, par un contractant général) doivent désormais intégrer le calcul RE2020 dès l'esquisse. Choix structurels, systèmes de chauffage et de production d'eau chaude, recours aux FDES individuelles plutôt qu'aux données par défaut : les arbitrages se font en amont, et l'économiste de la construction a un rôle direct à jouer.</p>
 <div class="callout"><h4>Ce que cela change pour vos opérations</h4><ul>
 <li>Vérifier la date de dépôt du permis : c'est elle qui détermine le régime applicable.</li>
 <li>Intégrer l'étude thermique et carbone dans le budget et le planning d'études.</li>
@@ -206,7 +230,7 @@ ACTU = [
 </ul>
 <h2>ERP et baux commerciaux</h2>
 <p>La loi assouplit certaines procédures d'autorisation des établissements recevant du public, sous réserve des décrets d'application. Côté baux commerciaux, le dépôt de garantie est plafonné à trois mois de loyer pour les baux conclus ou renouvelés à compter du 26 mai 2026, et le locataire peut demander à payer son loyer mensuellement.</p>
-<div class="callout"><h4>Ce que cela change pour vos opérations</h4><p>Pour les bâtiments d'activité soumis aux obligations de toitures végétalisées ou solaires, une solution réfléchissante peut désormais être étudiée dès la conception. Notre société sœur <a href="https://albedia.eu" rel="noopener">ALBEDIA</a> est spécialisée dans ces revêtements.</p></div>""",
+<div class="callout"><h4>Ce que cela change pour vos opérations</h4><p>Pour les bâtiments d'activité soumis aux obligations de toitures végétalisées ou solaires, une solution réfléchissante peut désormais être étudiée dès la conception, puis chiffrée et comparée aux autres options par l'économiste de la construction.</p></div>""",
   sources=[("Ministère de la Transition écologique — Loi SVE : mesures urbanisme, construction et aménagement commercial", "https://www.ecologie.gouv.fr/politiques-publiques/loi-simplification-vie-economique-sve-mesures-urbanisme-construction"),
            ("FFB — Loi de simplification de la vie économique : ce qui change pour les entreprises du secteur", "https://www.ffbatiment.fr/revues-guides/ba/13-juillet-2026/loi-simplification-vie-economique-changement-entreprises"),
            ("Ministère de l'Économie — Ce qui change pour les entreprises", "https://www.economie.gouv.fr/node/3240780")]),
